@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系 — 预约咨询 | Praxis Advisory</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:48px}
+  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px}
+  .contact-card h3{margin-bottom:20px}
+  .expect-list{list-style:none;counter-reset:exp}
+  .expect-list li{counter-increment:exp;padding:16px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start}
+  .expect-list li::before{content:counter(exp,decimal-leading-zero);color:var(--gold);font-weight:800;font-size:.85rem;min-width:28px}
+  .expect-list li:last-child{border-bottom:none}
+  .expect-list strong{color:#fff;display:block;margin-bottom:4px}
+  .expect-list span{color:var(--text2);font-size:.9rem}
+  @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:38px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:38px;" data-lang="zh"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+    <li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+    <li><a href="contact.html" class="active"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-cta"><button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button><a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="hero" style="padding-bottom:40px;">
+  <div class="badge"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></div>
+  <h1 class="gradient-text" style="margin-top:24px;"><span data-lang="zh">开始对话</span><span data-lang="en">Start a Conversation</span></h1>
+  <p class="subtitle" style="max-width:560px;"><span data-lang="zh">一次45分钟的直接对话。<br>没有套路，没有标准PPT，只有真实的诊断。</span><span data-lang="en">A 45-minute direct conversation.<br>No pitch. No standard deck. A real assessment.</span></p>
+</section>
+
+<section class="section-pad"><div class="container"><div class="contact-grid">
+  <div>
+    <div class="contact-card" style="margin-bottom:24px;">
+      <h3>📧 <span data-lang="zh">联系方式</span><span data-lang="en">Contact Info</span></h3>
+      <div style="margin-bottom:16px;"><p style="font-size:.85rem;color:var(--muted);margin-bottom:4px;"><span data-lang="zh">咨询合作</span><span data-lang="en">Consulting</span></p><a href="mailto:contact-growth@proton.me" style="color:var(--gold);text-decoration:none;font-size:1rem;">contact-growth@proton.me</a></div>
+      <div style="margin-bottom:16px;"><p style="font-size:.85rem;color:var(--muted);margin-bottom:4px;">LinkedIn</p><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank" style="color:var(--gold);text-decoration:none;font-size:1rem;">linkedin.com/in/alexandre-lu</a></div>
+      <div><p style="font-size:.85rem;color:var(--muted);margin-bottom:4px;"><span data-lang="zh">所在地</span><span data-lang="en">Location</span></p><p style="font-size:1rem;"><span data-lang="zh">上海 · 中国</span><span data-lang="en">Shanghai, China</span></p></div>
+    </div>
+    <div class="contact-card">
+      <h3>🕐 <span data-lang="zh">工作时间</span><span data-lang="en">Hours</span></h3>
+      <p style="font-size:.95rem;"><span data-lang="zh">周一至周五，9:00 - 18:00 (CST)<br><span style="color:var(--text2);font-size:.88rem;">紧急事项可邮件沟通，通常24小时内回复</span></span><span data-lang="en">Monday – Friday, 9:00 – 18:00 CST<br><span style="color:var(--text2);font-size:.88rem;">Urgent matters via email, typically replied within 24 hours</span></span></p>
+    </div>
+  </div>
+  <div>
+    <div class="contact-card">
+      <h3>🤝 <span data-lang="zh">你会得到什么</span><span data-lang="en">What to Expect</span></h3>
+      <ol class="expect-list">
+        <li><div><strong><span data-lang="zh">直接对话</span><span data-lang="en">Direct Conversation</span></strong><span><span data-lang="zh">不是销售团队，是创始人本人直接和你沟通。</span><span data-lang="en">Not a sales team — the founder, directly.</span></span></div></li>
+        <li><div><strong><span data-lang="zh">真实评估</span><span data-lang="en">Honest Assessment</span></strong><span><span data-lang="zh">我会告诉你我看到了什么，以及我们是否适合合作。</span><span data-lang="en">I'll tell you what I see and whether we're the right fit.</span></span></div></li>
+        <li><div><strong><span data-lang="zh">明确的下一步</span><span data-lang="en">Clear Next Steps</span></strong><span><span data-lang="zh">无论是否合作，你都会带着清晰的方向离开。</span><span data-lang="en">Whether or not we work together, you'll leave with clarity.</span></span></div></li>
+        <li><div><strong><span data-lang="zh">无义务承诺</span><span data-lang="en">No Obligation</span></strong><span><span data-lang="zh">这是一次探索性对话，不是销售流程。</span><span data-lang="en">This is an exploratory conversation, not a sales process.</span></span></div></li>
+      </ol>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="section-pad" style="background:var(--bg2);"><div class="container" style="max-width:800px;">
+  <div class="section-header"><div class="badge">FAQ</div><h2><span data-lang="zh">常见问题</span><span data-lang="en">Frequently Asked</span></h2></div>
+  <div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span><span data-lang="zh">咨询费用大概是什么水平？</span><span data-lang="en">What are your consulting fees?</span></span></div><div class="faq-a"><p><span data-lang="zh">每个项目根据复杂度和范围定价。我会在了解你的具体需求后给出明确报价。没有隐藏费用。</span><span data-lang="en">Each project is priced on scope and complexity. I provide clear pricing after understanding your needs. No hidden fees.</span></p></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span><span data-lang="zh">一次咨询通常需要多长时间？</span><span data-lang="en">How long does an engagement take?</span></span></div><div class="faq-a"><p><span data-lang="zh">聚焦型评估4-6周。完整战略项目8-14周。培训工作坊通常1-3天。</span><span data-lang="en">Focused assessments: 4-6 weeks. Full strategy: 8-14 weeks. Training workshops: 1-3 days.</span></p></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span><span data-lang="zh">你和AI厂商有合作关系吗？</span><span data-lang="en">Do you have vendor partnerships?</span></span></div><div class="faq-a"><p><span data-lang="zh">没有。我不收取任何厂商的推荐费、返利或实施佣金。我的建议完全基于你的需求。</span><span data-lang="en">No. I receive no referral fees, rebates, or implementation commissions from any vendor. My advice is based entirely on your needs.</span></p></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span><span data-lang="zh">我们还没准备好用AI，可以先聊聊吗？</span><span data-lang="en">We're not ready for AI — can we still talk?</span></span></div><div class="faq-a"><p><span data-lang="zh">当然。这往往就是对话的起点。你不需要"准备好"才开始。</span><span data-lang="en">Absolutely. That's often where the conversation starts. You don't need to be "ready" to begin.</span></p></div></div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh"></a><p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation</span><br>洞察于浅，知行于深</p></div>
+  <div><h4><span data-lang="zh">导航</span><span data-lang="en">Nav</span></h4><ul><li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li><li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li><li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li><li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
+let currentLang='zh';
+function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+</script>
+</body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Lu | Media Appearances · 媒体发声</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  :root{--bg:#06090f;--card:#0d1424;--card-hover:#111b30;--border:rgba(56,189,248,0.08);--border-hover:rgba(56,189,248,0.25);--cyan:#38bdf8;--blue:#3b82f6;--purple:#a78bfa;--emerald:#34d399;--rose:#fb7185;--amber:#fbbf24;--text:#e2e8f0;--text2:#94a3b8;--muted:#64748b}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter','Noto Sans SC',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(56,189,248,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+  body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 30% 20%,rgba(56,189,248,0.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(139,92,246,0.05) 0%,transparent 50%);pointer-events:none;z-index:0}
+
+  /* ===== Lang Toggle ===== */
+  .lang-toggle{position:fixed;top:24px;right:24px;z-index:100;display:flex;align-items:center;gap:8px;background:rgba(13,20,36,0.85);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:24px;padding:6px 16px 6px 10px;cursor:pointer;transition:all .3s}
+  .lang-toggle:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(56,189,248,0.12)}
+  .lang-toggle .globe{font-size:1.2rem;line-height:1}
+  .lang-toggle .label{font-size:.8rem;color:var(--text2);font-weight:500;min-width:20px;transition:opacity .2s}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;text-align:center;padding:100px 24px 70px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(56,189,248,0.04) 0%,transparent 100%);z-index:1}
+  .hero-badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid rgba(56,189,248,0.25);background:rgba(56,189,248,0.06);color:var(--cyan);font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
+  .hero h1{font-size:3.2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,var(--cyan) 50%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .tagline{font-size:1.15rem;color:var(--text2);max-width:640px;margin:0 auto 36px;font-weight:300}
+  .hero .stats{display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
+  .stat{text-align:center}.stat-num{font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.stat-label{font-size:.8rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+
+  .container{position:relative;max-width:1100px;margin:0 auto;padding:48px 24px;z-index:1}
+
+  /* ===== Filters ===== */
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;justify-content:center}
+  .filter-btn{padding:9px 20px;border-radius:8px;border:1px solid rgba(56,189,248,0.12);background:rgba(56,189,248,0.04);color:var(--muted);cursor:pointer;font-size:.85rem;font-family:inherit;font-weight:500;transition:all .3s;backdrop-filter:blur(8px)}
+  .filter-btn:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(56,189,248,0.08)}
+  .filter-btn.active{background:linear-gradient(135deg,rgba(56,189,248,0.15),rgba(139,92,246,0.1));border-color:var(--cyan);color:#fff;box-shadow:0 0 20px rgba(56,189,248,0.15)}
+
+  /* ===== Section ===== */
+  .section{margin-bottom:64px}
+  .section-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  .section-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+  .section-title-group{flex:1}
+  .section-title{font-size:1.3rem;font-weight:700;color:#fff}
+  .section-count{color:var(--muted);font-size:.85rem;padding:4px 12px;border:1px solid var(--border);border-radius:6px;background:rgba(56,189,248,0.04)}
+
+  /* ===== Card ===== */
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;margin-bottom:16px;transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent);opacity:0;transition:opacity .35s}
+  .card:hover{border-color:var(--border-hover);background:var(--card-hover);transform:translateY(-3px);box-shadow:0 12px 40px rgba(56,189,248,0.08),0 0 0 1px rgba(56,189,248,0.1)}
+  .card:hover::before{opacity:1}
+  .card-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .card-date{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .card-outlet{display:inline-block;font-size:.72rem;padding:3px 10px;border-radius:6px;font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+  .outlet-cb{background:rgba(251,113,133,0.12);color:var(--rose);border:1px solid rgba(251,113,133,0.2)}
+  .outlet-cnbc{background:rgba(52,211,153,0.12);color:var(--emerald);border:1px solid rgba(52,211,153,0.2)}
+  .outlet-scmp{background:rgba(167,139,250,0.12);color:var(--purple);border:1px solid rgba(167,139,250,0.2)}
+  .outlet-barrons{background:rgba(251,191,36,0.12);color:var(--amber);border:1px solid rgba(251,191,36,0.2)}
+  .outlet-wire{background:rgba(251,113,133,0.12);color:var(--rose);border:1px solid rgba(251,113,133,0.2)}
+  .outlet-wechat{background:rgba(52,211,153,0.12);color:var(--emerald);border:1px solid rgba(52,211,153,0.2)}
+  .outlet-other{background:rgba(148,163,184,0.12);color:var(--text2);border:1px solid rgba(148,163,184,0.2)}
+  .card-title{font-size:1.12rem;font-weight:700;margin-bottom:12px;line-height:1.45;color:#fff}
+  .card-title a{color:inherit;text-decoration:none;transition:color .2s}.card-title a:hover{color:var(--cyan)}
+  .card-summary{font-size:.92rem;color:var(--text2);margin-bottom:16px;line-height:1.75}
+  .card-quote{font-size:.9rem;background:linear-gradient(135deg,rgba(56,189,248,0.06),rgba(139,92,246,0.04));padding:14px 18px;border-radius:10px;margin-bottom:16px;border-left:3px solid var(--cyan);color:var(--text);line-height:1.7}
+  .card-quote::before{content:'💬 Alex Lu';display:block;font-size:.75rem;font-weight:700;color:var(--cyan);margin-bottom:8px;letter-spacing:.03em}
+  .card-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .tag{font-size:.72rem;padding:4px 10px;border-radius:6px;background:rgba(56,189,248,0.06);color:var(--cyan);border:1px solid rgba(56,189,248,0.15);font-weight:500;letter-spacing:.02em}
+  .card-link{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--cyan);text-decoration:none;padding:8px 16px;border:1px solid rgba(56,189,248,0.2);border-radius:8px;transition:all .25s;font-weight:500;background:rgba(56,189,248,0.04)}
+  .card-link:hover{background:rgba(56,189,248,0.12);border-color:var(--cyan);box-shadow:0 0 20px rgba(56,189,248,0.15)}
+  .card-link svg{width:14px;height:14px}
+
+  /* ===== Lang Switching ===== */
+  [data-lang="en"]{display:none}
+  body.lang-en [data-lang="zh"]{display:none}
+  body.lang-en [data-lang="en"]{display:block}
+  span[data-lang="en"]{display:none}
+  body.lang-en span[data-lang="zh"]{display:none}
+  body.lang-en span[data-lang="en"]{display:inline}
+
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:.82rem;z-index:1;position:relative;background:linear-gradient(0deg,rgba(56,189,248,0.02),transparent)}
+  @media(max-width:640px){.hero{padding:60px 16px 48px}.hero h1{font-size:2rem}.hero .stats{gap:28px}.stat-num{font-size:1.8rem}.card{padding:20px}.lang-toggle{top:12px;right:12px;padding:5px 12px 5px 8px}}
+</style>
+</head>
+<body>
+
+<!-- ===== Globe Language Toggle ===== -->
+<div class="lang-toggle" onclick="toggleLang()">
+  <span class="globe">🌐</span>
+  <span class="label" id="langLabel">EN</span>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Media & Thought Leadership</div>
+  <h1>
+    <span data-lang="zh">Alex Lu · 媒体发声</span>
+    <span data-lang="en">Alex Lu · Media Appearances</span>
+  </h1>
+  <p class="tagline">
+    <span data-lang="zh">从汽车行业到AI前沿，跨越15年咨询经验的专业洞见与行业观察</span>
+    <span data-lang="en">From automotive to AI frontiers — 15+ years of consulting expertise distilled into expert commentary</span>
+  </p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">20</div><div class="stat-label"><span data-lang="zh">媒体报道</span><span data-lang="en">Publications</span></div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label"><span data-lang="zh">分类</span><span data-lang="en">Categories</span></div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label"><span data-lang="zh">国家/地区</span><span data-lang="en">Countries</span></div></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterAll()"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
+    <button class="filter-btn" onclick="filterCat('auto')">🚗 <span data-lang="zh">汽车行业</span><span data-lang="en">Auto</span></button>
+    <button class="filter-btn" onclick="filterCat('trade')">🌐 <span data-lang="zh">贸易关税</span><span data-lang="en">Trade</span></button>
+    <button class="filter-btn" onclick="filterCat('ai')">🤖 <span data-lang="zh">AI科技</span><span data-lang="en">AI / Tech</span></button>
+    <button class="filter-btn" onclick="filterCat('global')">🌍 <span data-lang="zh">全球视野</span><span data-lang="en">Global</span></button>
+  </div>
+
+  <!-- ===== 汽车行业 ===== -->
+  <div class="section" data-cat="auto">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(251,113,133,0.1)">🚗</div>
+      <div class="section-title-group">
+        <div class="section-title"><span data-lang="zh">汽车行业深度分析</span><span data-lang="en">Automotive Industry Deep Dives</span></div>
+      </div>
+      <div class="section-count">8</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025-06-18</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135310481268" target="_blank"><span data-lang="zh">日产汽车拟减持雷诺股份 联盟关系"松绑"再进一步？</span><span data-lang="en">Nissan Plans to Reduce Renault Stake — Alliance "Unbundling" Goes Further</span></a></div>
+      <div class="card-summary"><span data-lang="zh">日产汽车计划出售雷诺5%股份，筹资约1000亿日元用于新车型开发。这一举动被视为日产与雷诺逾20年联盟关系进一步"松绑"的信号。</span><span data-lang="en">Nissan plans to sell 5% of its Renault stake, raising ~¥100B for new vehicle development. The move signals a further "unbundling" of the 20+ year Nissan-Renault alliance.</span></div>
+      <div class="card-quote"><span data-lang="zh">日产减持雷诺主要有两方面考虑：一是通过股份出让获取现金帮助扭转经营困境；二是雷诺即将迎来CEO更迭，当下正是弱化资本"绑定"的"机会窗口"，以便更自由地投入与本田等合作伙伴的新关系。</span><span data-lang="en">Two key motivations: raising cash to turnaround operations, and seizing the "window of opportunity" before Renault's CEO change to weaken capital ties and pursue freer partnerships with Honda and others.</span></div>
+      <div class="card-tags"><span class="tag">日产</span><span class="tag">雷诺联盟</span><span class="tag">股权重组</span><span class="tag">全球格局</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135310481268" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025-06-18</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135310651265" target="_blank"><span data-lang="zh">雷诺"转型推手"CEO德梅奥即将离任 电动化战略接力成新CEO挑战</span><span data-lang="en">Renault's Transformation-Driving CEO de Meo Set to Leave — EV Strategy Relay Ahead</span></a></div>
+      <div class="card-summary"><span data-lang="zh">雷诺CEO德梅奥即将离任，其主导的电动化战略能否延续成为业界关注焦点。新CEO面临的挑战包括在全球汽车转型期维持雷诺的竞争力。</span><span data-lang="en">Renault CEO de Meo is departing. Whether his EV transformation strategy continues is the industry's key question, with the new CEO facing challenges maintaining competitiveness amid global auto transition.</span></div>
+      <div class="card-tags"><span class="tag">雷诺</span><span class="tag">CEO更迭</span><span class="tag">电动化</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135310651265" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025-05-17</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135251911641" target="_blank"><span data-lang="zh">拆解"汽车一哥"丰田汽车财报：压力藏在利润表下</span><span data-lang="en">Dissecting Toyota's Financials: The "Auto King's" Hidden Pressures Beneath Profitability</span></a></div>
+      <div class="card-summary"><span data-lang="zh">丰田汽车2024财年净利润达2366亿人民币，依然是全球最赚钱的车企。但面临特朗普关税政策、原材料价格上涨及日元升值多重压力。</span><span data-lang="en">Toyota's FY2024 net profit hit ¥236.6B RMB — still the world's most profitable automaker — yet facing Trump tariffs, rising material costs, and yen appreciation.</span></div>
+      <div class="card-quote"><span data-lang="zh">丰田之所以是全球盈利能力最强的车企，关键在于其高度全球化的布局。与中国车企普遍以国内市场为主不同，丰田的利润来源覆盖日本、北美、欧洲等多个市场，这种多元化布局显著增强了其对区域性风险的抵御能力。</span><span data-lang="en">Toyota's global profitability stems from its highly diversified revenue — unlike Chinese automakers mostly dependent on domestic market, Toyota's profits span Japan, North America, and Europe, significantly enhancing resilience against regional risks.</span></div>
+      <div class="card-tags"><span class="tag">丰田</span><span class="tag">财报分析</span><span class="tag">全球化</span><span class="tag">盈利模式</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135251911641" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135258691649" target="_blank"><span data-lang="zh">合资2.0时代：跨国企业在华启用发展新策略</span><span data-lang="en">Joint Venture 2.0: Multinationals Adopt New China Strategies</span></a></div>
+      <div class="card-summary"><span data-lang="zh">随着中国汽车市场竞争格局变化，跨国车企正从传统合资模式向更灵活的"合资2.0"模式转型，在华战略全面升级。</span><span data-lang="en">As China's auto market evolves, multinationals are shifting from traditional JV models to a more flexible "JV 2.0" approach, fully upgrading their China strategies.</span></div>
+      <div class="card-tags"><span class="tag">合资模式</span><span class="tag">跨国车企</span><span class="tag">战略转型</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135258691649" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135261141644" target="_blank"><span data-lang="zh">长城汽车欲造超跑：一场高端化棋局？</span><span data-lang="en">Great Wall Motor's Supercar Ambition: A Premium-ization Gambit?</span></a></div>
+      <div class="card-summary"><span data-lang="zh">长城汽车宣布进军超跑市场，这一举措被视为其品牌高端化战略的关键一步，但也面临技术、品牌认知等多重挑战。</span><span data-lang="en">GWM's move into supercars is a critical step in its premium brand strategy, though facing significant technical and brand perception challenges.</span></div>
+      <div class="card-tags"><span class="tag">长城汽车</span><span class="tag">高端化</span><span class="tag">超跑</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135261141644" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135264821642" target="_blank"><span data-lang="zh">慕尼黑车展交锋：跨国车企亮剑电动化 中国"整零"企业协同出海</span><span data-lang="en">IAA Munich: Global OEMs Showcase EV Tech While Chinese Players Go Overseas as a Cohort</span></a></div>
+      <div class="card-summary"><span data-lang="zh">在慕尼黑车展上，跨国车企集中展示电动化成果，中国企业则以"整车+零部件"协同模式加速出海步伐。</span><span data-lang="en">At IAA Munich, global OEMs showcased EV breakthroughs while Chinese players accelerated overseas expansion via coordinated "vehicle + components" ecosystem play.</span></div>
+      <div class="card-tags"><span class="tag">慕尼黑车展</span><span class="tag">电动化</span><span class="tag">中国出海</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135264821642" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025-01-27</span><span class="card-outlet outlet-cnbc">CNBC</span></div>
+      <div class="card-title"><a href="https://www.cnbc.com/2025/01/27/chinese-ai-applications-are-looking-to-move-beyond-chatbots.html" target="_blank"><span data-lang="zh">中国AI应用有了更大目标 — 不再止步于聊天机器人</span><span data-lang="en">Chinese AI Applications Now Have Bigger Aims — Looking Beyond Chatbots</span></a></div>
+      <div class="card-summary"><span data-lang="zh">中国AI公司正从聊天机器人向更广泛的应用场景拓展，百度文库AI用户突破4000万，企业级AI采用率加速提升。AI Agent即将大规模进入中国市场。</span><span data-lang="en">Chinese AI companies are expanding beyond chatbots — Baidu Wenku hit 40M paying AI users, enterprise adoption accelerates. AI Agents are about to enter China's market at scale.</span></div>
+      <div class="card-tags"><span class="tag">AI Agent</span><span class="tag">企业应用</span><span class="tag">百度</span></div>
+      <a class="card-link" href="https://www.cnbc.com/2025/01/27/chinese-ai-applications-are-looking-to-move-beyond-chatbots.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+  </div>
+
+  <!-- ===== 贸易与关税 ===== -->
+  <div class="section" data-cat="trade">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(251,191,36,0.1)">🌐</div>
+      <div class="section-title-group">
+        <div class="section-title"><span data-lang="zh">中欧贸易与关税博弈</span><span data-lang="en">China-EU Trade & Tariff Dynamics</span></div>
+      </div>
+      <div class="section-count">3</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025-04-04</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135301401260" target="_blank"><span data-lang="zh">商务部：中欧同意重启电动车反补贴案价格承诺谈判</span><span data-lang="en">Commerce Ministry: China & EU Agree to Restart EV Anti-Subsidy Price Talks</span></a></div>
+      <div class="card-summary"><span data-lang="zh">中欧同意重启电动车反补贴案价格承诺谈判。在中美关税摩擦背景下，中欧合作成为双方应对美国关税压力的策略选择。</span><span data-lang="en">With US tariffs shaking both sides, China and EU agree to restart EV subsidy price talks — a natural strategic response to shared US trade pressure.</span></div>
+      <div class="card-quote"><span data-lang="zh">美国政府加征关税直接让中欧"凉透了心"。中欧同意重启电动车反补贴案价格承诺谈判，是面对美国关税最典型的应对策略。欧盟的反补贴只是一时之举，并没有完全关上中国新能源汽车进入欧洲的大门。</span><span data-lang="en">US tariffs chilled both China and EU. Restarting EV subsidy talks is the most natural strategic response. EU anti-subsidy measures are temporary — they haven't fully shut the door on Chinese NEVs entering Europe.</span></div>
+      <div class="card-tags"><span class="tag">中欧谈判</span><span class="tag">反补贴</span><span class="tag">中美博弈</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135301401260" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2024-10-12</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135233841644" target="_blank"><span data-lang="zh">欧盟投票通过对华电动车征超高关税 德系三大车企发声反对</span><span data-lang="en">EU Votes for Ultra-High Tariffs on Chinese EVs — German Big Three Push Back</span></a></div>
+      <div class="card-summary"><span data-lang="zh">欧盟正式投票通过对中国电动车征收最高45.3%关税。宝马、奔驰、大众三大德系车企公开反对，认为此举将损害欧洲消费者和产业利益。</span><span data-lang="en">EU formally votes for up to 45.3% tariffs on Chinese EVs. BMW, Mercedes-Benz, and VW publicly oppose, arguing it harms European consumers and industry competitiveness.</span></div>
+      <div class="card-quote"><span data-lang="zh">特斯拉税率低是因为有强大的公关团队；比亚迪税率低是因为在欧洲有投资建厂。欧盟加征20.7%的反补贴税，是基于中国车企仍有30%~40%成本优势的判断。德国和匈牙利投反对票是因为与中国关系紧密；法国和意大利投赞成票则有各自的产业考量。</span><span data-lang="en">Tesla's low tariff rate reflects strong lobbying; BYD's reflects European investment. The 20.7% surcharge assumes Chinese OEMs still hold 30-40% cost advantage. Germany and Hungary voted against due to deep China ties; France and Italy voted for based on their own industrial calculus.</span></div>
+      <div class="card-tags"><span class="tag">欧盟关税</span><span class="tag">BBA</span><span class="tag">贸易壁垒</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135233841644" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2024-10-08</span><span class="card-outlet outlet-cb">中国经营报</span></div>
+      <div class="card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135278651265" target="_blank"><span data-lang="zh">最高需缴45.3% 宝马、奔驰、大众针对欧盟反补贴税发声</span><span data-lang="en">Up to 45.3%: BMW, Mercedes-Benz & VW Speak Out Against EU Anti-Subsidy Duties</span></a></div>
+      <div class="card-summary"><span data-lang="zh">欧盟对中国电动车征收最高45.3%关税引发多方反对。宝马称这是"事关行业命运的重要信号"，大众CEO呼吁考虑优惠在欧投资的中国车企。</span><span data-lang="en">EU's 45.3% max tariff on Chinese EVs sparks backlash. BMW calls it "an industry-defining signal"; VW CEO urges preferential treatment for Chinese OEMs investing in Europe.</span></div>
+      <div class="card-quote"><span data-lang="zh">虽然近年来欧洲人积极拥抱清洁能源，但相比中国，欧洲的电动化转型相对缓慢。有些欧盟成员国希望通过关税保护欧洲电动车产业，同时希望中国车企把前沿技术和产业链带到欧洲，推动电动化转型，就像当年特斯拉来中国引发的"鲶鱼效应"。</span><span data-lang="en">Europe's EV transition lags China. Some EU members want tariffs to buy time for domestic industry, while simultaneously hoping Chinese OEMs bring cutting-edge tech — creating the same "catfish effect" Tesla triggered in China.</span></div>
+      <div class="card-tags"><span class="tag">宝马</span><span class="tag">奔驰</span><span class="tag">大众</span><span class="tag">鲶鱼效应</span></div>
+      <a class="card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135278651265" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+  </div>
+
+  <!-- ===== AI 洞见 ===== -->
+  <div class="section" data-cat="ai">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(167,139,250,0.1)">🤖</div>
+      <div class="section-title-group">
+        <div class="section-title"><span data-lang="zh">AI 与科技趋势</span><span data-lang="en">AI & Technology Trends</span></div>
+      </div>
+      <div class="section-count">5</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2026-01-28</span><span class="card-outlet outlet-cnbc">CNBC</span></div>
+      <div class="card-title"><a href="https://www.cnbc.com/2026/01/28/chinese-tech-companies-accelerate-ai-model-rollouts-us-rivals-deepseek-moonshot-kimi.html" target="_blank"><span data-lang="zh">DeepSeek一年后：中国AI企业加速发布新模型</span><span data-lang="en">One Year After DeepSeek, Chinese AI Firms Race to Release New Models</span></a></div>
+      <div class="card-summary"><span data-lang="zh">DeepSeek发布一年后，中国AI企业加速追赶。阿里巴巴发布Qwen3-Max-Thinking，月之暗面推出Kimi K2.5，百度发布Ernie 5.0，竞争日趋白热化。</span><span data-lang="en">One year post-DeepSeek, China's AI race intensifies: Alibaba launches Qwen3-Max-Thinking, Moonshot releases Kimi K2.5, Baidu unveils Ernie 5.0 — competition is red-hot.</span></div>
+      <div class="card-tags"><span class="tag">DeepSeek</span><span class="tag">大模型</span><span class="tag">阿里巴巴</span></div>
+      <a class="card-link" href="https://www.cnbc.com/2026/01/28/chinese-tech-companies-accelerate-ai-model-rollouts-us-rivals-deepseek-moonshot-kimi.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2026</span><span class="card-outlet outlet-barrons">Barron's</span></div>
+      <div class="card-title"><a href="https://www.barrons.com/news/startups-go-public-in-litmus-test-for-chinese-ai-2da10ae1" target="_blank"><span data-lang="zh">中国AI创业公司上市：行业的试金石</span><span data-lang="en">Startups Go Public in Litmus Test for Chinese AI</span></a></div>
+      <div class="card-summary"><span data-lang="zh">中国AI创业公司智谱AI和MiniMax相继在港交所上市，成为中国AI产业发展的试金石。资本市场对AI赛道的热情与理性正在接受检验。</span><span data-lang="en">Zhipu AI and MiniMax IPO'd in Hong Kong — a litmus test for China's AI sector. Capital market appetite for AI is being tested as startups seek public market validation.</span></div>
+      <div class="card-tags"><span class="tag">AI IPO</span><span class="tag">智谱AI</span><span class="tag">MiniMax</span></div>
+      <a class="card-link" href="https://www.barrons.com/news/startups-go-public-in-litmus-test-for-chinese-ai-2da10ae1" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2026-02-08</span><span class="card-outlet outlet-wire">The Wire China</span></div>
+      <div class="card-title"><a href="https://www.thewirechina.com/2026/02/08/china-is-churning-out-a-growing-army-of-service-robots/" target="_blank"><span data-lang="zh">中国正在批量生产一支日益庞大的服务机器人军团</span><span data-lang="en">China Is Churning Out a Growing Army of Service Robots</span></a></div>
+      <div class="card-summary"><span data-lang="zh">中国服务机器人产业正在快速扩张，从餐饮配送到酒店服务，机器人正大规模进入日常生活场景，展现中国在机器人领域的制造实力。</span><span data-lang="en">China's service robot industry is booming — from food delivery to hospitality, robots are entering daily life at scale, showcasing China's manufacturing prowess in robotics.</span></div>
+      <div class="card-tags"><span class="tag">服务机器人</span><span class="tag">中国制造</span></div>
+      <a class="card-link" href="https://www.thewirechina.com/2026/02/08/china-is-churning-out-a-growing-army-of-service-robots/" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2026</span><span class="card-outlet outlet-scmp">SCMP</span></div>
+      <div class="card-title"><a href="https://www.scmp.com/tech/tech-trends/article/3350340/chinas-ai-firms-scaled-open-source-models-next-phase-may-be-different" target="_blank"><span data-lang="zh">中国AI企业已规模化开源模型 — 下一阶段可能大不同</span><span data-lang="en">China's AI Firms Scaled Open-Source Models — Next Phase May Be Different</span></a></div>
+      <div class="card-summary"><span data-lang="zh">中国AI企业在开源大模型领域取得突破后，下一阶段的竞争焦点可能转向差异化应用和商业模式创新。</span><span data-lang="en">After cracking open-source LLMs at scale, Chinese AI firms' next battleground may shift to differentiated applications and business model innovation.</span></div>
+      <div class="card-tags"><span class="tag">开源模型</span><span class="tag">AI商业化</span></div>
+      <a class="card-link" href="https://www.scmp.com/tech/tech-trends/article/3350340/chinas-ai-firms-scaled-open-source-models-next-phase-may-be-different" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2026</span><span class="card-outlet outlet-other">AIPROEM</span></div>
+      <div class="card-title"><a href="https://aiproem.substack.com/p/where-does-europe-fit-in-the-so-called" target="_blank"><span data-lang="zh">欧洲在全球AI竞赛中处于什么位置？</span><span data-lang="en">Where Does Europe Fit in the So-Called AI Race?</span></a></div>
+      <div class="card-summary"><span data-lang="zh">探讨欧洲在全球AI竞争格局中的定位与角色，分析欧洲在AI政策、投资和创新方面的机遇与挑战。</span><span data-lang="en">Exploring Europe's position in the global AI race — examining opportunities and challenges in AI policy, investment, and innovation across the continent.</span></div>
+      <div class="card-tags"><span class="tag">欧洲AI</span><span class="tag">全球竞争</span></div>
+      <a class="card-link" href="https://aiproem.substack.com/p/where-does-europe-fit-in-the-so-called" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+  </div>
+
+  <!-- ===== 全球视野 ===== -->
+  <div class="section" data-cat="global">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,211,153,0.1)">🌍</div>
+      <div class="section-title-group">
+        <div class="section-title"><span data-lang="zh">全球视角与跨文化洞察</span><span data-lang="en">Global Perspectives & Cross-Cultural Insights</span></div>
+      </div>
+      <div class="section-count">4</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-wechat">微信公众号</span></div>
+      <div class="card-title"><a href="https://mp.weixin.qq.com/s/6NE5F_MXuKu54saF4A_rfg" target="_blank"><span data-lang="zh">峰回路转？多轮博弈欧盟或取消对中国电动汽车加征关税</span><span data-lang="en">A Turning Point? EU May Cancel Tariffs on Chinese EVs After Multiple Rounds of Negotiation</span></a></div>
+      <div class="card-summary"><span data-lang="zh">在多轮博弈后，欧盟可能调整或取消对中国电动汽车的加征关税政策。文章分析了中欧经贸关系的复杂性与关税政策的演变轨迹。</span><span data-lang="en">After multiple rounds of negotiation, the EU may adjust or cancel tariffs on Chinese EVs. Analysis of the complex China-EU trade relationship and tariff policy evolution.</span></div>
+      <div class="card-tags"><span class="tag">欧盟关税</span><span class="tag">中欧关系</span></div>
+      <a class="card-link" href="https://mp.weixin.qq.com/s/6NE5F_MXuKu54saF4A_rfg" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-other">AFP / TradingView</span></div>
+      <div class="card-title"><a href="https://fr.tradingview.com/news/afp:239ccf386c215:0/" target="_blank"><span data-lang="zh">法新社：中国科技与全球市场动态</span><span data-lang="en">AFP: China Tech & Global Market Dynamics</span></a></div>
+      <div class="card-summary"><span data-lang="zh">法新社关于中国科技发展与全球市场影响的报道。</span><span data-lang="en">AFP reporting on China's tech development and its global market impact.</span></div>
+      <div class="card-tags"><span class="tag">法新社</span><span class="tag">全球市场</span></div>
+      <a class="card-link" href="https://fr.tradingview.com/news/afp:239ccf386c215:0/" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-other">Ahram (法语)</span></div>
+      <div class="card-title"><a href="https://french.ahram.org.eg/News/76866.aspx" target="_blank"><span data-lang="zh">埃及新闻：中国经济与科技专题</span><span data-lang="en">Egyptian Media: China Economy & Tech Feature</span></a></div>
+      <div class="card-summary"><span data-lang="zh">埃及媒体关于中国经济与科技发展的专题报道。</span><span data-lang="en">Egyptian media coverage on China's economic and technological development.</span></div>
+      <div class="card-tags"><span class="tag">中东视角</span><span class="tag">国际报道</span></div>
+      <a class="card-link" href="https://french.ahram.org.eg/News/76866.aspx" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read Article</span></a>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-date">2025</span><span class="card-outlet outlet-other">Spotify 播客</span></div>
+      <div class="card-title"><a href="https://open.spotify.com/show/5FHayFPSNBHsVKHP9OQ7xe?si=171a76f4050d42e6" target="_blank"><span data-lang="zh">播客访谈：AI与商业趋势</span><span data-lang="en">Podcast: AI & Business Trends</span></a></div>
+      <div class="card-summary"><span data-lang="zh">在播客节目中分享对中国AI生态、咨询行业变革和创业实践的深度见解。</span><span data-lang="en">Sharing deep insights on China's AI ecosystem, consulting industry transformation, and entrepreneurial practice on this podcast episode.</span></div>
+      <div class="card-tags"><span class="tag">播客</span><span class="tag">AI趋势</span><span class="tag">创业</span></div>
+      <a class="card-link" href="https://open.spotify.com/show/5FHayFPSNBHsVKHP9OQ7xe?si=171a76f4050d42e6" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">收听播客</span><span data-lang="en">Listen</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024–2026 Alex Lu · 浅觉深知咨询</p>
+</footer>
+
+<script>
+let currentLang = 'zh';
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  document.body.classList.toggle('lang-en', currentLang === 'en');
+  document.getElementById('langLabel').textContent = currentLang === 'zh' ? 'EN' : '中';
+}
+function filterAll() {
+  document.querySelectorAll('.section').forEach(s => s.style.display = '');
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.filter-btn').classList.add('active');
+}
+function filterCat(cat) {
+  document.querySelectorAll('.section').forEach(s => {
+    s.style.display = s.dataset.cat === cat ? '' : 'none';
+  });
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.closest('.filter-btn').classList.add('active');
+}
+</script>
+</body>
+</html>

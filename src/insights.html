@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洞察 — 媒体发声 | Praxis Advisory</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .insights-hero{padding:140px 24px 60px;text-align:center;position:relative;z-index:1;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(184,150,90,0.03) 0%,transparent 100%)}
+  .insights-stats{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;margin-top:36px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:48px auto 0;justify-content:center;max-width:1100px;position:relative;z-index:1}
+  .filter-btn{padding:9px 20px;border-radius:8px;border:1px solid rgba(184,150,90,0.12);background:rgba(184,150,90,0.04);color:var(--muted);cursor:pointer;font-size:.85rem;font-family:inherit;font-weight:500;transition:all .3s;backdrop-filter:blur(8px)}
+  .filter-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(184,150,90,0.08)}
+  .filter-btn.active{background:linear-gradient(135deg,rgba(184,150,90,0.15),rgba(184,150,90,0.08));border-color:var(--gold);color:var(--navy);box-shadow:0 0 20px rgba(184,150,90,0.12)}
+  .i-section{margin-bottom:56px;position:relative;z-index:1}
+  .i-section-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  .i-section-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+  .i-section-title{font-size:1.3rem;font-weight:700;color:var(--navy);flex:1}
+  .i-section-count{color:var(--muted);font-size:.85rem;padding:4px 12px;border:1px solid var(--border);border-radius:6px;background:rgba(184,150,90,0.04)}
+  .i-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;margin-bottom:16px;transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+  .i-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),transparent);opacity:0;transition:opacity .35s}
+  .i-card:hover{border-color:var(--border-hover);background:var(--card-hover);transform:translateY(-3px);box-shadow:0 12px 40px rgba(184,150,90,0.06),0 0 0 1px rgba(184,150,90,0.1)}
+  .i-card:hover::before{opacity:1}
+  .i-card-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .i-card-date{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .i-card-outlet{display:inline-block;font-size:.72rem;padding:3px 10px;border-radius:6px;font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+  .outlet-cb{background:rgba(251,113,133,0.12);color:var(--rose);border:1px solid rgba(251,113,133,0.2)}
+  .outlet-cnbc{background:rgba(52,211,153,0.12);color:var(--emerald);border:1px solid rgba(52,211,153,0.2)}
+  .outlet-scmp{background:rgba(167,139,250,0.12);color:var(--purple);border:1px solid rgba(167,139,250,0.2)}
+  .outlet-barrons{background:rgba(251,191,36,0.12);color:var(--amber);border:1px solid rgba(251,191,36,0.2)}
+  .outlet-wire{background:rgba(251,113,133,0.12);color:var(--rose);border:1px solid rgba(251,113,133,0.2)}
+  .outlet-wechat{background:rgba(52,211,153,0.12);color:var(--emerald);border:1px solid rgba(52,211,153,0.2)}
+  .outlet-other{background:rgba(148,163,184,0.12);color:var(--text2);border:1px solid rgba(148,163,184,0.2)}
+  .i-card-title{font-size:1.12rem;font-weight:700;margin-bottom:12px;line-height:1.45;color:#fff}
+  .i-card-title a{color:inherit;text-decoration:none;transition:color .2s}
+  .i-card-title a:hover{color:var(--gold)}
+  .i-card-summary{font-size:.92rem;color:var(--text2);margin-bottom:16px;line-height:1.75}
+  .i-card-quote{font-size:.9rem;background:rgba(184,150,90,0.06);padding:14px 18px;border-radius:10px;margin-bottom:16px;border-left:3px solid var(--gold);color:var(--text);line-height:1.7}
+  .i-card-quote::before{content:'💬 Alex Lu';display:block;font-size:.75rem;font-weight:700;color:var(--gold);margin-bottom:8px;letter-spacing:.03em}
+  .i-card-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .tag{font-size:.72rem;padding:4px 10px;border-radius:6px;background:rgba(184,150,90,0.06);color:var(--gold);border:1px solid rgba(184,150,90,0.15);font-weight:500;letter-spacing:.02em}
+  .i-card-link{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--gold);text-decoration:none;padding:8px 16px;border:1px solid rgba(184,150,90,0.2);border-radius:8px;transition:all .25s;font-weight:500;background:rgba(184,150,90,0.04)}
+  .i-card-link:hover{background:rgba(184,150,90,0.12);border-color:var(--gold);box-shadow:0 0 20px rgba(184,150,90,0.12)}
+  .i-card-link svg{width:14px;height:14px}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:38px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:38px;" data-lang="zh"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+    <li><a href="insights.html" class="active"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+    <li><a href="contact.html"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-cta"><button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button><a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="insights-hero">
+  <div class="badge"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></div>
+  <h1 class="gradient-text" style="margin-top:24px;"><span data-lang="zh">洞察与发声</span><span data-lang="en">Insights & Media</span></h1>
+  <p class="subtitle" style="max-width:640px;"><span data-lang="zh">从汽车行业到AI前沿，跨越15年咨询经验的专业洞见。<br>写给那些需要为这些项目负责的人。</span><span data-lang="en">From automotive to AI frontiers — 15+ years of consulting expertise distilled into expert commentary.<br>Written for the people accountable for making these programs work.</span></p>
+  <div class="insights-stats">
+    <div class="stat"><div class="stat-num">20+</div><div class="stat-label"><span data-lang="zh">媒体报道</span><span data-lang="en">Publications</span></div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label"><span data-lang="zh">分类</span><span data-lang="en">Categories</span></div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label"><span data-lang="zh">国家/地区</span><span data-lang="en">Countries</span></div></div>
+  </div>
+</section>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="filterAll()"><span data-lang="zh">全部</span><span data-lang="en">All</span></button>
+  <button class="filter-btn" onclick="filterCat('auto')">🚗 <span data-lang="zh">汽车行业</span><span data-lang="en">Auto</span></button>
+  <button class="filter-btn" onclick="filterCat('trade')">🌐 <span data-lang="zh">贸易关税</span><span data-lang="en">Trade</span></button>
+  <button class="filter-btn" onclick="filterCat('ai')">🤖 <span data-lang="zh">AI科技</span><span data-lang="en">AI / Tech</span></button>
+  <button class="filter-btn" onclick="filterCat('global')">🌍 <span data-lang="zh">全球视野</span><span data-lang="en">Global</span></button>
+</div>
+
+<div class="container" style="padding-top:32px;padding-bottom:64px;">
+
+  <!-- Auto -->
+  <div class="i-section" data-cat="auto">
+    <div class="i-section-header">
+      <div class="i-section-icon" style="background:rgba(251,113,133,0.1)">🚗</div>
+      <div class="i-section-title"><span data-lang="zh">汽车行业深度分析</span><span data-lang="en">Automotive Industry Deep Dives</span></div>
+      <div class="i-section-count">8</div>
+    </div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025-06-18</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135310481268" target="_blank">日产汽车拟减持雷诺股份 联盟关系"松绑"再进一步？</a></div><div class="i-card-summary">日产汽车计划出售雷诺5%股份，筹资约1000亿日元用于新车型开发。这一举动被视为日产与雷诺逾20年联盟关系进一步"松绑"的信号。</div><div class="i-card-quote">日产减持雷诺主要有两方面考虑：一是通过股份出让获取现金帮助扭转经营困境；二是雷诺即将迎来CEO更迭，当下正是弱化资本"绑定"的"机会窗口"，以便更自由地投入与本田等合作伙伴的新关系。</div><div class="i-card-tags"><span class="tag">日产</span><span class="tag">雷诺联盟</span><span class="tag">股权重组</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135310481268" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025-06-18</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135310651265" target="_blank">雷诺"转型推手"CEO德梅奥即将离任 电动化战略接力成新CEO挑战</a></div><div class="i-card-summary">雷诺CEO德梅奥即将离任，其主导的电动化战略能否延续成为业界关注焦点。</div><div class="i-card-tags"><span class="tag">雷诺</span><span class="tag">CEO更迭</span><span class="tag">电动化</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135310651265" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025-05-17</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135251911641" target="_blank">拆解"汽车一哥"丰田汽车财报：压力藏在利润表下</a></div><div class="i-card-summary">丰田汽车2024财年净利润达2366亿人民币，依然是全球最赚钱的车企。但面临多重压力。</div><div class="i-card-quote">丰田之所以是全球盈利能力最强的车企，关键在于其高度全球化的布局。与中国车企普遍以国内市场为主不同，丰田的利润来源覆盖日本、北美、欧洲等多个市场。</div><div class="i-card-tags"><span class="tag">丰田</span><span class="tag">财报分析</span><span class="tag">全球化</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135251911641" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135258691649" target="_blank">合资2.0时代：跨国企业在华启用发展新策略</a></div><div class="i-card-summary">随着中国汽车市场竞争格局变化，跨国车企正从传统合资模式向更灵活的"合资2.0"模式转型。</div><div class="i-card-tags"><span class="tag">合资模式</span><span class="tag">跨国车企</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135258691649" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135261141644" target="_blank">长城汽车欲造超跑：一场高端化棋局？</a></div><div class="i-card-summary">长城汽车宣布进军超跑市场，被视为品牌高端化战略的关键一步。</div><div class="i-card-tags"><span class="tag">长城汽车</span><span class="tag">高端化</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135261141644" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135264821642" target="_blank">慕尼黑车展交锋：跨国车企亮剑电动化 中国"整零"企业协同出海</a></div><div class="i-card-summary">跨国车企集中展示电动化成果，中国企业则以"整车+零部件"协同模式加速出海步伐。</div><div class="i-card-tags"><span class="tag">慕尼黑车展</span><span class="tag">电动化</span><span class="tag">中国出海</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135264821642" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025-01-27</span><span class="i-card-outlet outlet-cnbc">CNBC</span></div><div class="i-card-title"><a href="https://www.cnbc.com/2025/01/27/chinese-ai-applications-are-looking-to-move-beyond-chatbots.html" target="_blank">中国AI应用有了更大目标 — 不再止步于聊天机器人</a></div><div class="i-card-summary">中国AI公司正从聊天机器人向更广泛的应用场景拓展，百度文库AI用户突破4000万。</div><div class="i-card-tags"><span class="tag">AI Agent</span><span class="tag">企业应用</span></div><a class="i-card-link" href="https://www.cnbc.com/2025/01/27/chinese-ai-applications-are-looking-to-move-beyond-chatbots.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+  </div>
+
+  <!-- Trade -->
+  <div class="i-section" data-cat="trade">
+    <div class="i-section-header">
+      <div class="i-section-icon" style="background:rgba(251,191,36,0.1)">🌐</div>
+      <div class="i-section-title"><span data-lang="zh">中欧贸易与关税博弈</span><span data-lang="en">China-EU Trade & Tariff Dynamics</span></div>
+      <div class="i-section-count">3</div>
+    </div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025-04-04</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135301401260" target="_blank">商务部：中欧同意重启电动车反补贴案价格承诺谈判</a></div><div class="i-card-summary">在中美关税摩擦背景下，中欧合作成为双方应对美国关税压力的策略选择。</div><div class="i-card-quote">美国政府加征关税直接让中欧"凉透了心"。中欧同意重启电动车反补贴案价格承诺谈判，是面对美国关税最典型的应对策略。</div><div class="i-card-tags"><span class="tag">中欧谈判</span><span class="tag">反补贴</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135301401260" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2024-10-12</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/bzyc/cv/cv135233841644" target="_blank">欧盟投票通过对华电动车征超高关税 德系三大车企发声反对</a></div><div class="i-card-summary">欧盟正式投票通过对中国电动车征收最高45.3%关税。宝马、奔驰、大众公开反对。</div><div class="i-card-quote">特斯拉税率低是因为有强大的公关团队；比亚迪税率低是因为在欧洲有投资建厂。欧盟加征20.7%的反补贴税，是基于中国车企仍有30%~40%成本优势的判断。</div><div class="i-card-tags"><span class="tag">欧盟关税</span><span class="tag">BBA</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/bzyc/cv/cv135233841644" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2024-10-08</span><span class="i-card-outlet outlet-cb">中国经营报</span></div><div class="i-card-title"><a href="http://www.cb.com.cn/index/show/zj/cv/cv135278651265" target="_blank">最高需缴45.3% 宝马、奔驰、大众针对欧盟反补贴税发声</a></div><div class="i-card-summary">宝马称这是"事关行业命运的重要信号"，大众CEO呼吁考虑优惠在欧投资的中国车企。</div><div class="i-card-quote">有些欧盟成员国希望通过关税保护欧洲电动车产业，同时希望中国车企把前沿技术和产业链带到欧洲，推动电动化转型，就像当年特斯拉来中国引发的"鲶鱼效应"。</div><div class="i-card-tags"><span class="tag">宝马</span><span class="tag">奔驰</span><span class="tag">大众</span></div><a class="i-card-link" href="http://www.cb.com.cn/index/show/zj/cv/cv135278651265" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+  </div>
+
+  <!-- AI -->
+  <div class="i-section" data-cat="ai">
+    <div class="i-section-header">
+      <div class="i-section-icon" style="background:rgba(167,139,250,0.1)">🤖</div>
+      <div class="i-section-title"><span data-lang="zh">AI 与科技趋势</span><span data-lang="en">AI & Technology Trends</span></div>
+      <div class="i-section-count">5</div>
+    </div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2026-01-28</span><span class="i-card-outlet outlet-cnbc">CNBC</span></div><div class="i-card-title"><a href="https://www.cnbc.com/2026/01/28/chinese-tech-companies-accelerate-ai-model-rollouts-us-rivals-deepseek-moonshot-kimi.html" target="_blank">DeepSeek一年后：中国AI企业加速发布新模型</a></div><div class="i-card-summary">阿里巴巴发布Qwen3-Max-Thinking，月之暗面推出Kimi K2.5，百度发布Ernie 5.0，竞争白热化。</div><div class="i-card-tags"><span class="tag">DeepSeek</span><span class="tag">大模型</span></div><a class="i-card-link" href="https://www.cnbc.com/2026/01/28/chinese-tech-companies-accelerate-ai-model-rollouts-us-rivals-deepseek-moonshot-kimi.html" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2026</span><span class="i-card-outlet outlet-barrons">Barron's</span></div><div class="i-card-title"><a href="https://www.barrons.com/news/startups-go-public-in-litmus-test-for-chinese-ai-2da10ae1" target="_blank">中国AI创业公司上市：行业的试金石</a></div><div class="i-card-summary">智谱AI和MiniMax相继在港交所上市，成为中国AI产业发展的试金石。</div><div class="i-card-tags"><span class="tag">AI IPO</span><span class="tag">智谱AI</span></div><a class="i-card-link" href="https://www.barrons.com/news/startups-go-public-in-litmus-test-for-chinese-ai-2da10ae1" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2026-02-08</span><span class="i-card-outlet outlet-wire">The Wire China</span></div><div class="i-card-title"><a href="https://www.thewirechina.com/2026/02/08/china-is-churning-out-a-growing-army-of-service-robots/" target="_blank">中国正在批量生产一支日益庞大的服务机器人军团</a></div><div class="i-card-summary">中国服务机器人产业快速扩张，从餐饮配送到酒店服务，机器人正大规模进入日常生活。</div><div class="i-card-tags"><span class="tag">服务机器人</span><span class="tag">中国制造</span></div><a class="i-card-link" href="https://www.thewirechina.com/2026/02/08/china-is-churning-out-a-growing-army-of-service-robots/" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2026</span><span class="i-card-outlet outlet-scmp">SCMP</span></div><div class="i-card-title"><a href="https://www.scmp.com/tech/tech-trends/article/3350340/chinas-ai-firms-scaled-open-source-models-next-phase-may-be-different" target="_blank">中国AI企业已规模化开源模型 — 下一阶段可能大不同</a></div><div class="i-card-summary">开源大模型突破后，竞争焦点可能转向差异化应用和商业模式创新。</div><div class="i-card-tags"><span class="tag">开源模型</span><span class="tag">AI商业化</span></div><a class="i-card-link" href="https://www.scmp.com/tech/tech-trends/article/3350340/chinas-ai-firms-scaled-open-source-models-next-phase-may-be-different" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2026</span><span class="i-card-outlet outlet-other">AIPROEM</span></div><div class="i-card-title"><a href="https://aiproem.substack.com/p/where-does-europe-fit-in-the-so-called" target="_blank">欧洲在全球AI竞赛中处于什么位置？</a></div><div class="i-card-summary">探讨欧洲在全球AI竞争格局中的定位与角色。</div><div class="i-card-tags"><span class="tag">欧洲AI</span><span class="tag">全球竞争</span></div><a class="i-card-link" href="https://aiproem.substack.com/p/where-does-europe-fit-in-the-so-called" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+  </div>
+
+  <!-- Global -->
+  <div class="i-section" data-cat="global">
+    <div class="i-section-header">
+      <div class="i-section-icon" style="background:rgba(52,211,153,0.1)">🌍</div>
+      <div class="i-section-title"><span data-lang="zh">全球视角与跨文化洞察</span><span data-lang="en">Global Perspectives</span></div>
+      <div class="i-section-count">4</div>
+    </div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-wechat">微信公众号</span></div><div class="i-card-title"><a href="https://mp.weixin.qq.com/s/6NE5F_MXuKu54saF4A_rfg" target="_blank">峰回路转？多轮博弈欧盟或取消对中国电动汽车加征关税</a></div><div class="i-card-summary">在多轮博弈后，欧盟可能调整或取消对中国电动汽车的加征关税政策。</div><div class="i-card-tags"><span class="tag">欧盟关税</span><span class="tag">中欧关系</span></div><a class="i-card-link" href="https://mp.weixin.qq.com/s/6NE5F_MXuKu54saF4A_rfg" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-other">AFP / TradingView</span></div><div class="i-card-title"><a href="https://fr.tradingview.com/news/afp:239ccf386c215:0/" target="_blank">法新社：中国科技与全球市场动态</a></div><div class="i-card-summary">法新社关于中国科技发展与全球市场影响的报道。</div><div class="i-card-tags"><span class="tag">法新社</span><span class="tag">全球市场</span></div><a class="i-card-link" href="https://fr.tradingview.com/news/afp:239ccf386c215:0/" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-other">Ahram (法语)</span></div><div class="i-card-title"><a href="https://french.ahram.org.eg/News/76866.aspx" target="_blank">埃及新闻：中国经济与科技专题</a></div><div class="i-card-summary">埃及媒体关于中国经济与科技发展的专题报道。</div><div class="i-card-tags"><span class="tag">中东视角</span><span class="tag">国际报道</span></div><a class="i-card-link" href="https://french.ahram.org.eg/News/76866.aspx" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">阅读原文</span><span data-lang="en">Read</span></a></div>
+    <div class="i-card"><div class="i-card-top"><span class="i-card-date">2025</span><span class="i-card-outlet outlet-other">Spotify 播客</span></div><div class="i-card-title"><a href="https://open.spotify.com/show/5FHayFPSNBHsVKHP9OQ7xe?si=171a76f4050d42e6" target="_blank">播客访谈：AI与商业趋势</a></div><div class="i-card-summary">在播客节目中分享对中国AI生态、咨询行业变革和创业实践的深度见解。</div><div class="i-card-tags"><span class="tag">播客</span><span class="tag">AI趋势</span></div><a class="i-card-link" href="https://open.spotify.com/show/5FHayFPSNBHsVKHP9OQ7xe?si=171a76f4050d42e6" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span data-lang="zh">收听播客</span><span data-lang="en">Listen</span></a></div>
+  </div>
+
+</div>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh"></a><p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation</span><br>洞察于浅，知行于深</p></div>
+  <div><h4><span data-lang="zh">导航</span><span data-lang="en">Nav</span></h4><ul><li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li><li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li><li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li><li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
+let currentLang='zh';
+function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+function filterAll(){document.querySelectorAll('.i-section').forEach(s=>s.style.display='');document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelector('.filter-btn').classList.add('active')}
+function filterCat(cat){document.querySelectorAll('.i-section').forEach(s=>{s.style.display=s.dataset.cat===cat?'':'none'});document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));event.target.closest('.filter-btn').classList.add('active')}
+</script>
+</body></html>

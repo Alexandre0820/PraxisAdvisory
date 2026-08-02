@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案例 — 战略 · 定价 · AI | Praxis Advisory</title>
+<meta name="description" content="Praxis Advisory 精选案例：企业战略与管理咨询、定价与卓越销售、AI落地与转型。全部案例脱敏呈现。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .cases-hero{padding:140px 24px 70px;text-align:center;position:relative;z-index:1;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(184,150,90,0.03) 0%,transparent 100%)}
+  .pillar-nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px;position:relative;z-index:1}
+  .pillar-nav a{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text2);text-decoration:none;font-size:.88rem;font-weight:600;transition:all .25s;box-shadow:var(--shadow-sm)}
+  .pillar-nav a:hover{border-color:var(--gold);color:var(--gold-dark);transform:translateY(-2px)}
+  .case-section{padding:72px 0;border-bottom:1px solid var(--border)}
+  .case-section:last-of-type{border-bottom:none}
+  .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:40px}
+  .case-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;box-shadow:var(--shadow-sm);transition:all .3s ease;display:flex;flex-direction:column}
+  .case-card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .case-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .case-tag{font-size:.72rem;padding:4px 10px;border-radius:6px;font-weight:600;letter-spacing:.04em;background:rgba(184,150,90,0.08);color:var(--gold-dark);border:1px solid rgba(184,150,90,0.2)}
+  .case-type{font-size:.78rem;color:var(--muted);font-weight:500}
+  .case-card h3{font-size:1.15rem;color:var(--navy);margin-bottom:16px;line-height:1.4}
+  .case-card p{font-size:.9rem;line-height:1.75;margin-bottom:10px}
+  .case-card p strong{color:var(--navy)}
+  .case-result{margin-top:auto;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem;color:var(--navy);font-weight:600;line-height:1.6}
+  .case-result::before{content:'→ ';color:var(--gold)}
+  .case-more{margin-top:40px}
+  .case-more h4{font-size:.85rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+  .more-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .more-item{display:flex;gap:12px;align-items:baseline;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 18px}
+  .more-item .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;align-self:center}
+  .more-item .t{font-size:.9rem;font-weight:600;color:var(--navy);margin-right:8px;white-space:nowrap}
+  .more-item .d{font-size:.82rem;color:var(--muted)}
+  @media(max-width:640px){.more-item{flex-direction:column;gap:2px;align-items:flex-start}.more-item .t{white-space:normal}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:38px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:38px;" data-lang="zh"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li>
+    <li><a href="cases.html" class="active"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+    <li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+    <li><a href="contact.html"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-cta"><button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button><a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="cases-hero">
+  <div class="badge"><span data-lang="zh">精选案例</span><span data-lang="en">Selected Cases</span></div>
+  <h1 class="gradient-text" style="margin-top:24px;"><span data-lang="zh">做过的事<br>比说过的话更可信</span><span data-lang="en">What We've Done<br>Speaks Louder</span></h1>
+  <p class="subtitle" style="max-width:680px;"><span data-lang="zh">以下案例均已脱敏：不出现客户名称与个人职级，只呈现项目本身。我们服务过汽车、化工、软件、消费品、半导体等行业的头部企业与高成长公司，横跨中欧两地。</span><span data-lang="en">All cases are anonymized — no client names, no titles, only the work. We've served industry leaders and high-growth companies across automotive, chemicals, software, consumer goods and semiconductors, in both China and Europe.</span></p>
+  <div class="pillar-nav">
+    <a href="#strategy">🏛️ <span data-lang="zh">战略与管理</span><span data-lang="en">Strategy &amp; Mgmt</span></a>
+    <a href="#pricing">💰 <span data-lang="zh">定价与销售</span><span data-lang="en">Pricing &amp; Sales</span></a>
+    <a href="#ai">🤖 <span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a>
+  </div>
+</section>
+
+<!-- ============ 战略与管理咨询案例 ============ -->
+<section class="case-section" id="strategy"><div class="container">
+  <div class="section-header" style="text-align:left;margin-bottom:0;">
+    <div class="badge">01 — <span data-lang="zh">企业战略与管理咨询</span><span data-lang="en">Strategy &amp; Management Consulting</span></div>
+    <h2 style="margin-top:20px;"><span data-lang="zh">战略案例</span><span data-lang="en">Strategy Cases</span></h2>
+  </div>
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">汽车 · 战略</span><span data-lang="en">Auto · Strategy</span></span><span class="case-type"><span data-lang="zh">经销商绩效提升</span><span data-lang="en">Dealer Performance</span></span></div>
+      <h3><span data-lang="zh">某欧洲车企 · 中国经销商网络绩效提升</span><span data-lang="en">European OEM · Dealer Network Performance in China</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>经销商网络整体盈利承压，单店业绩与利润参差不齐，商务政策与终端销售动作脱节。</span><span data-lang="en"><strong>Challenge:</strong> A dealer network under margin pressure, with wide performance gaps across stores and weak links between commercial policy and frontline execution.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>对全网经销商做绩效诊断与分层，建立关键指标对标体系；重构商务政策与目标设定机制；在试点门店导入销售与库存管理工具，并驻场辅导。</span><span data-lang="en"><strong>Approach:</strong> Performance diagnosis and segmentation across the network, a KPI benchmarking system, redesigned commercial policies, and on-site coaching with sales and inventory tools at pilot stores.</span></p>
+      <div class="case-result"><span data-lang="zh">试点门店业绩与盈利显著提升，形成可复制的经销商管理工具包并向全网推广。</span><span data-lang="en">Pilot stores delivered significant gains in sales and profitability; the resulting dealer-management toolkit was rolled out network-wide.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">出行 · 战略</span><span data-lang="en">Mobility · Strategy</span></span><span class="case-type"><span data-lang="zh">市场评估与新服务上市</span><span data-lang="en">Market Assessment &amp; Launch</span></span></div>
+      <h3><span data-lang="zh">某德国车企 · 移动出行市场评估与服务上市</span><span data-lang="en">German OEM · Mobility Market Assessment &amp; Service Launch</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>出行市场正从"卖车"转向"卖服务"，管理层需要判断是否进入、以及以何种方式进入。</span><span data-lang="en"><strong>Challenge:</strong> With mobility shifting from selling cars to selling services, leadership needed a clear go/no-go and entry model.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>出行市场容量与竞争格局评估、目标客群细分、服务模式与定价设计、试点城市选择与分阶段上市路径。</span><span data-lang="en"><strong>Approach:</strong> Market sizing and competitive mapping, customer segmentation, service-model and pricing design, pilot-city selection, and a phased launch roadmap.</span></p>
+      <div class="case-result"><span data-lang="zh">形成清晰的进入判断、服务组合与上市计划，直接支撑董事会决策。</span><span data-lang="en">Delivered a clear entry decision, service portfolio and launch plan that directly informed board-level decisions.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">制造 · 转型</span><span data-lang="en">Industrial · Transformation</span></span><span class="case-type"><span data-lang="zh">重组路线图</span><span data-lang="en">Restructuring Roadmap</span></span></div>
+      <h3><span data-lang="zh">某中法合资企业 · 重组路线图</span><span data-lang="en">Sino-French JV · Restructuring Roadmap</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>业务与组织双重承压，管理层与股东对"往哪走、怎么走"存在分歧。</span><span data-lang="en"><strong>Challenge:</strong> Pressure on both business and organization, with management and shareholders divided on direction and pace.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>业务组合与成本结构全面诊断，设计聚焦与退出方案；明确组织调整与流程再造；制定分阶段实施路线图与治理决策机制。</span><span data-lang="en"><strong>Approach:</strong> Full diagnostic of portfolio and cost structure, focus and exit options, organizational and process redesign, and a phased roadmap with clear governance.</span></p>
+      <div class="case-result"><span data-lang="zh">形成各方认可的重组路线图，明确未来12–24个月的关键里程碑与资源安排。</span><span data-lang="en">A restructuring roadmap endorsed by all parties, with milestones and resource plans for the next 12–24 months.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">并购 · 尽调</span><span data-lang="en">M&amp;A · Due Diligence</span></span><span class="case-type"><span data-lang="zh">商业尽职调查</span><span data-lang="en">Commercial Due Diligence</span></span></div>
+      <h3><span data-lang="zh">某中国汽车集团 · 欧洲车企战略投资商业尽调</span><span data-lang="en">Chinese Auto Group · Cross-border Investment Due Diligence</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>跨市场、跨法域的战略投资，需要识别真实的商业价值与交易风险。</span><span data-lang="en"><strong>Challenge:</strong> A cross-border strategic investment requiring an objective read of commercial value and deal risk.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>目标公司市场地位、产品组合、渠道与财务表现评估；协同效应与整合可行性分析；识别关键交易风险并形成清单。</span><span data-lang="en"><strong>Approach:</strong> Assessment of market position, product portfolio, channels and financials; synergy and integration feasibility; and a prioritized risk list.</span></p>
+      <div class="case-result"><span data-lang="zh">完整的商业尽调结论，为投资决策与谈判策略提供依据。</span><span data-lang="en">A complete commercial due-diligence conclusion informing the investment decision and negotiation strategy.</span></div>
+    </div>
+  </div>
+  <div class="case-more">
+    <h4><span data-lang="zh">更多战略项目</span><span data-lang="en">More Strategy Engagements</span></h4>
+    <div class="more-grid">
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国轮胎企业</span><span data-lang="en">French tire maker</span></span><span class="d"><span data-lang="zh">创新与新业务构想</span><span data-lang="en">Innovation &amp; new business ideation</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国汽车供应商</span><span data-lang="en">French auto supplier</span></span><span class="d"><span data-lang="zh">新增长细分市场进入战略</span><span data-lang="en">GTM for a new growth segment</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某欧洲车企</span><span data-lang="en">European OEM</span></span><span class="d"><span data-lang="zh">经销商网络发展战略</span><span data-lang="en">Dealer network development</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国汽车供应商</span><span data-lang="en">French auto supplier</span></span><span class="d"><span data-lang="zh">中国市场进入与GTM</span><span data-lang="en">China market entry &amp; GTM</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国汽车供应商</span><span data-lang="en">French auto supplier</span></span><span class="d"><span data-lang="zh">董事会年度战略材料</span><span data-lang="en">Annual board strategy materials</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 定价与卓越销售案例 ============ -->
+<section class="case-section" id="pricing"><div class="container">
+  <div class="section-header" style="text-align:left;margin-bottom:0;">
+    <div class="badge">02 — <span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales Excellence</span></div>
+    <h2 style="margin-top:20px;"><span data-lang="zh">定价与销售案例</span><span data-lang="en">Pricing &amp; Sales Cases</span></h2>
+  </div>
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">软件 · 定价</span><span data-lang="en">Software · Pricing</span></span><span class="case-type"><span data-lang="zh">定价转型 · 三年陪跑</span><span data-lang="en">Pricing Transformation · 3-Year Co-pilot</span></span></div>
+      <h3><span data-lang="zh">某中国开源软件企业 · 定价转型与提价</span><span data-lang="en">Chinese Open-Source Firm · Pricing Transformation &amp; Price Increase</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>开源生态下的商业变现路径不清晰，价格体系缺失，增长依赖融资而非收入。</span><span data-lang="en"><strong>Challenge:</strong> An unclear monetization path in an open-source ecosystem, no price architecture, and growth funded by capital rather than revenue.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>从"技术价值"重新定义"客户价值"，设计分层产品与价格体系；分阶段实施提价与商业化路径；陪跑三年，持续校准定价、销售与产品策略。</span><span data-lang="en"><strong>Approach:</strong> Reframed customer value beyond technology, built a tiered product-and-price architecture, executed phased price increases, and co-piloted for three years to keep pricing, sales and product aligned.</span></p>
+      <div class="case-result"><span data-lang="zh">三年内收入实现100%增长，商业模式从融资驱动转向收入驱动。</span><span data-lang="en">Revenue doubled within three years, shifting the business from capital-driven to revenue-driven growth.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">消费品 · 定价</span><span data-lang="en">Consumer · Pricing</span></span><span class="case-type"><span data-lang="zh">提价与利润恢复</span><span data-lang="en">Price Increase &amp; Margin Recovery</span></span></div>
+      <h3><span data-lang="zh">某美国鞋类企业 · 提价与利润恢复</span><span data-lang="en">US Footwear Company · Price Increase &amp; Margin Recovery</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>成本上涨持续挤压利润，直接提价则担心渠道与终端抵触。</span><span data-lang="en"><strong>Challenge:</strong> Rising costs squeezing margins, with fears that direct price increases would trigger channel and consumer pushback.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>价格带与SKU利润池分析，制定分层定价策略；设计分渠道提价执行计划与销售话术；同步优化经销商库存与返利结构。</span><span data-lang="en"><strong>Approach:</strong> Price-band and SKU profit-pool analysis, tiered pricing, a channel-by-channel increase plan with sales playbooks, and rebalanced distributor rebates and inventory terms.</span></p>
+      <div class="case-result"><span data-lang="zh">项目实现利润率提升3–5%，且未损失市场份额。</span><span data-lang="en">3–5% margin uplift without losing market share.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">汽车 · 定价</span><span data-lang="en">Auto · Pricing</span></span><span class="case-type"><span data-lang="zh">新品定价与上市</span><span data-lang="en">Launch Pricing</span></span></div>
+      <h3><span data-lang="zh">某日本汽车OEM · 新品定价与上市策略</span><span data-lang="en">Japanese Auto OEM · New Product Launch Pricing</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>新车型上市前价格定位模糊，缺乏与竞品的价值对标，内部对定价存在分歧。</span><span data-lang="en"><strong>Challenge:</strong> Unclear price positioning before a model launch, no structured value benchmark against competitors, and internal disagreement on pricing.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>客户价值研究（VOC）与竞品价格对标，构建价值-价格定位；设计配置定价与价格带；上市前进行价格测试并建立经销商反馈机制。</span><span data-lang="en"><strong>Approach:</strong> Voice-of-customer research and competitor benchmarking to build a value-price position, configuration pricing and price bands, pre-launch price testing, and a dealer feedback loop.</span></p>
+      <div class="case-result"><span data-lang="zh">新车定价获得经销商与终端认可，上市初期订单符合预期。</span><span data-lang="en">Launch pricing was embraced by dealers and customers; early orders met expectations.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">半导体 · 销售</span><span data-lang="en">Semiconductors · Sales</span></span><span class="case-type"><span data-lang="zh">销售培训 · 10场</span><span data-lang="en">Sales Training · 10 Sessions</span></span></div>
+      <h3><span data-lang="zh">某新加坡半导体公司 · 销售培训体系</span><span data-lang="en">Singapore Semiconductor Firm · Sales Training Program</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>销售团队打法不统一，新市场拓展乏力，年度业绩目标压力大。</span><span data-lang="en"><strong>Challenge:</strong> Inconsistent sales playbooks, weak traction in new markets, and aggressive annual targets.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>定制销售方法论与客户分层打法；全年交付10场实战培训，覆盖拜访、谈判、关键客户管理与销售工具落地；训后跟进辅导与复盘机制。</span><span data-lang="en"><strong>Approach:</strong> A custom sales methodology with customer-tiering playbooks, ten hands-on training sessions across prospecting, negotiation, key account management and tooling, plus post-training coaching and reviews.</span></p>
+      <div class="case-result"><span data-lang="zh">帮助团队超额完成2025年度业绩目标。</span><span data-lang="en">The team exceeded its 2025 revenue targets.</span></div>
+    </div>
+  </div>
+  <div class="case-more">
+    <h4><span data-lang="zh">更多定价与销售项目</span><span data-lang="en">More Pricing &amp; Sales Engagements</span></h4>
+    <div class="more-grid">
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国化工企业</span><span data-lang="en">French chemical company</span></span><span class="d"><span data-lang="zh">中国业务动态定价</span><span data-lang="en">Dynamic pricing in China</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某德国车企</span><span data-lang="en">German auto OEM</span></span><span class="d"><span data-lang="zh">备件定价卓越</span><span data-lang="en">Spare parts pricing excellence</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某国际啤酒企业</span><span data-lang="en">International brewer</span></span><span class="d"><span data-lang="zh">中国增长与变现策略</span><span data-lang="en">China growth &amp; monetization</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某董秘SaaS企业</span><span data-lang="en">Board-secretary SaaS</span></span><span class="d"><span data-lang="zh">定价与新价格策略</span><span data-lang="en">Pricing &amp; new price strategy</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ AI 落地与转型案例 ============ -->
+<section class="case-section" id="ai"><div class="container">
+  <div class="section-header" style="text-align:left;margin-bottom:0;">
+    <div class="badge">03 — <span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Implementation &amp; Transformation</span></div>
+    <h2 style="margin-top:20px;"><span data-lang="zh">AI 案例</span><span data-lang="en">AI Cases</span></h2>
+  </div>
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">SaaS · AI转型</span><span data-lang="en">SaaS · AI Transformation</span></span><span class="case-type"><span data-lang="zh">产品与商业模式重构</span><span data-lang="en">Product &amp; Business-model Redesign</span></span></div>
+      <h3><span data-lang="zh">某法国SaaS企业 · 中国产品AI转型</span><span data-lang="en">French SaaS Firm · AI Transformation of Its China Product</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>原有业务以订阅制销售汽车行业数据，客户价值感下降，增长乏力。</span><span data-lang="en"><strong>Challenge:</strong> A subscription business selling raw automotive data was losing perceived value and growth momentum.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>重新定义产品价值主张——从"卖数据"到"卖洞察"；设计AI驱动的数据洞察产品形态；同步调整商业模式与定价逻辑。</span><span data-lang="en"><strong>Approach:</strong> Reframed the value proposition from selling data to selling insights, designed an AI-driven insight product, and reworked the business model and pricing logic.</span></p>
+      <div class="case-result"><span data-lang="zh">建立清晰的AI转型路线图与新商业模式，推动产品从数据订阅走向业务洞察服务。</span><span data-lang="en">Established a clear AI transformation roadmap and business model, moving the product from data subscriptions to insight services.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">国际 · 生态连接</span><span data-lang="en">International · Ecosystem</span></span><span class="case-type"><span data-lang="zh">CXO代表团 · 连续两年</span><span data-lang="en">CXO Delegation · Two Consecutive Years</span></span></div>
+      <h3><span data-lang="zh">巴西CXO代表团 · 中国AI生态与产业对接</span><span data-lang="en">Brazilian CXO Delegation · China AI Ecosystem &amp; Robotics Connections</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>巴西企业高层希望系统理解中国AI生态、识别可落地合作机会，而非泛泛的参观考察。</span><span data-lang="en"><strong>Challenge:</strong> Brazilian executives needed a systematic read of China's AI ecosystem and actionable opportunities — not a generic site visit.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>定制中国AI生态全景分享：政策与市场格局、主要玩家与技术路线、典型应用案例；组织企业参访与交流，定向对接中国机器人等领先企业。</span><span data-lang="en"><strong>Approach:</strong> Tailored ecosystem briefings on policy, market structure, key players and applications, plus company visits and targeted introductions to Chinese robotics leaders.</span></p>
+      <div class="case-result"><span data-lang="zh">连续两年获邀主讲，协助代表团与中国AI企业建立实质性连接。</span><span data-lang="en">Invited back for a second year; the delegation left with concrete connections to Chinese AI companies.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">金融保险 · 培训</span><span data-lang="en">Insurance · Training</span></span><span class="case-type"><span data-lang="zh">高管AI工作坊</span><span data-lang="en">Executive AI Workshop</span></span></div>
+      <h3><span data-lang="zh">某保险机构 · 高管AI培训</span><span data-lang="en">Insurance Institution · Executive AI Training</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>管理层对AI"既兴奋又焦虑"，缺乏统一认知与落地抓手。</span><span data-lang="en"><strong>Challenge:</strong> Leadership was excited yet anxious about AI, without shared understanding or a starting point.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>定制3–3.5小时高管工作坊：AI的能力与边界、主流工具与智能体范式、提示词与共创实操、企业级AI落地挑战与场景识别。</span><span data-lang="en"><strong>Approach:</strong> A bespoke 3–3.5 hour executive workshop: what AI can and cannot do, agents and mainstream tools, hands-on prompting and co-creation, and identifying enterprise-ready use cases.</span></p>
+      <div class="case-result"><span data-lang="zh">高管团队形成AI认知共识，明确首批落地场景，为全员普及打下基础。</span><span data-lang="en">Leadership aligned on AI, prioritized initial use cases, and laid the foundation for company-wide adoption.</span></div>
+    </div>
+    <div class="case-card">
+      <div class="case-top"><span class="case-tag"><span data-lang="zh">产品 · 0到1</span><span data-lang="en">Product · 0 to 1</span></span><span class="case-type"><span data-lang="zh">AI产品孵化 · 合伙参与</span><span data-lang="en">AI Product Incubation · Partner Role</span></span></div>
+      <h3><span data-lang="zh">素问 · 市场情报AI产品（0→1）</span><span data-lang="en">Suwen · Market Intelligence AI Product (0→1)</span></h3>
+      <p><span data-lang="zh"><strong>挑战：</strong>从零打造面向市场情报场景的AI产品：验证需求、定义产品、找到付费客户。</span><span data-lang="en"><strong>Challenge:</strong> Building an AI product for market intelligence from scratch — validating demand, defining the product, and finding paying customers.</span></p>
+      <p><span data-lang="zh"><strong>方法：</strong>以产品合伙人身份与创始团队并肩作战：需求洞察、产品定义、AI能力架构、市场验证，陪同走过完整的"从0到1"。</span><span data-lang="en"><strong>Approach:</strong> Joined the founding team as a product partner: demand discovery, product definition, AI architecture, and market validation — through the full 0-to-1 journey.</span></p>
+      <div class="case-result"><span data-lang="zh">产品从想法走向可交付版本，完成早期客户验证。</span><span data-lang="en">The product moved from idea to deliverable version, with early customer validation.</span></div>
+    </div>
+  </div>
+  <div class="case-more">
+    <h4><span data-lang="zh">更多 AI 项目</span><span data-lang="en">More AI Engagements</span></h4>
+    <div class="more-grid">
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某挪威铝业企业</span><span data-lang="en">Norwegian aluminum group</span></span><span class="d"><span data-lang="zh">中国AI生态介绍</span><span data-lang="en">China AI ecosystem briefing</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">法国创业者</span><span data-lang="en">French entrepreneurs</span></span><span class="d"><span data-lang="zh">美妆行业与AI应用洞察</span><span data-lang="en">Beauty industry &amp; AI applications</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">法国创业者</span><span data-lang="en">French entrepreneurs</span></span><span class="d"><span data-lang="zh">AI在工业与仓储中的应用</span><span data-lang="en">AI in industry &amp; warehousing</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某法国电池龙头</span><span data-lang="en">French battery leader</span></span><span class="d"><span data-lang="zh">中国合作伙伴寻源与谈判陪同</span><span data-lang="en">Partner sourcing &amp; negotiation support</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">某合资车企</span><span data-lang="en">Chinese JV automaker</span></span><span class="d"><span data-lang="zh">全员AI培训（100–150人次 · 3个半天）</span><span data-lang="en">Company-wide AI training (100–150 staff)</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">30+ 外国CXO</span><span data-lang="en">30+ foreign CXOs</span></span><span class="d"><span data-lang="zh">中国AI生态闭门演讲</span><span data-lang="en">Closed-door China AI ecosystem talk</span></span></div>
+      <div class="more-item"><span class="dot"></span><span class="t"><span data-lang="zh">圣保罗 · AI大会</span><span data-lang="en">São Paulo AI conference</span></span><span class="d"><span data-lang="zh">主旨演讲</span><span data-lang="en">Keynote speech</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section-pad"><div class="container">
+  <div class="cta-banner" style="background:linear-gradient(135deg,rgba(184,150,90,0.06),rgba(26,39,68,0.04));border:1px solid var(--border);border-radius:20px;padding:64px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(184,150,90,0.06),transparent 70%);"></div>
+    <h2 class="gradient-text" style="position:relative;"><span data-lang="zh">看到与你相似的项目？</span><span data-lang="en">See a Project Like Yours?</span></h2>
+    <p style="color:var(--text2);font-size:1.05rem;position:relative;margin-bottom:32px;"><span data-lang="zh">一次45分钟的直接对话，聊聊你的挑战，看看我们能如何帮到你。</span><span data-lang="en">A 45-minute direct conversation about your challenges — and how we can help.</span></p>
+    <a href="contact.html" class="btn btn-primary" style="position:relative;font-size:1rem;padding:16px 40px;"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh"></a><p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型<br>洞察于浅，知行于深</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation<br>From Insight to Execution</span></p></div>
+  <div><h4><span data-lang="zh">导航</span><span data-lang="en">Nav</span></h4><ul><li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li><li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li><li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li><li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
+let currentLang='zh';
+function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+</script>
+</body></html>

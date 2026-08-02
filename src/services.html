@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服务 — 战略 · 定价 · AI | Praxis Advisory</title>
+<meta name="description" content="Praxis Advisory 三大专业板块：企业战略与管理咨询、定价与卓越销售、AI落地与转型。源自15年顶级咨询方法论，以可衡量的业务成果为终点。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .service-hero{padding:140px 24px 80px;text-align:center;position:relative;z-index:1;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(184,150,90,0.03) 0%,transparent 100%)}
+  .service-section{padding:80px 0;border-bottom:1px solid var(--border)}
+  .service-section:last-of-type{border-bottom:none}
+  .service-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .service-list{list-style:none}
+  .service-list li{padding:20px 0;border-bottom:1px solid var(--border)}
+  .service-list li:last-child{border-bottom:none}
+  .service-list .num{color:var(--gold);font-weight:800;margin-right:12px;font-size:.85rem}
+  .service-list h3{font-size:1.05rem;margin-bottom:6px;color:var(--navy)}
+  .service-list p{font-size:.9rem;line-height:1.7}
+  .mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+  .mode-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm);transition:all .3s}
+  .mode-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .mode-card h4{color:var(--navy);margin-bottom:10px;font-size:1rem}
+  .mode-card p{font-size:.85rem;line-height:1.7}
+  .compare-table{width:100%;border-collapse:collapse;margin-top:32px}
+  .compare-table th{text-align:left;padding:16px 20px;font-size:.85rem;font-weight:600;border-bottom:2px solid var(--border);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .compare-table td{padding:16px 20px;font-size:.92rem;border-bottom:1px solid var(--border);vertical-align:top}
+  .compare-table tr:hover td{background:rgba(184,150,90,0.05)}
+  .compare-table .label-col{color:var(--text2);font-weight:500;width:40%}
+  .compare-table .bad{color:var(--rose)}
+  .compare-table .good{color:var(--emerald)}
+  @media(max-width:900px){.service-split{grid-template-columns:1fr;gap:40px}.mode-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:38px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:38px;" data-lang="zh"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html" class="active"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li>
+    <li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+    <li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+    <li><a href="contact.html"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-cta"><button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button><a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></div>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</div></nav>
+
+<section class="service-hero">
+  <div class="badge"><span data-lang="zh">服务</span><span data-lang="en">Services</span></div>
+  <h1 class="gradient-text" style="margin-top:24px;"><span data-lang="zh">三大专业能力<br>一个共同目标：可衡量的增长</span><span data-lang="en">Three Disciplines.<br>One Outcome: Measurable Growth.</span></h1>
+  <p class="subtitle" style="max-width:640px;"><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型。源自15年顶级咨询方法论，不卖工具、不卖PPT，以业务成果为终点。</span><span data-lang="en">Enterprise strategy · Pricing & sales excellence · AI implementation. Built on 15 years of top-tier consulting methodology — ending with outcomes, not decks.</span></p>
+</section>
+
+<!-- ============ 01 企业战略与管理咨询 ============ -->
+<section class="service-section" id="strategy"><div class="container"><div class="service-split">
+  <div>
+    <div class="badge" style="margin-bottom:20px;">01 — <span data-lang="zh">企业战略与管理咨询</span><span data-lang="en">Enterprise Strategy & Management Consulting</span></div>
+    <h2 style="margin-bottom:20px;"><span data-lang="zh">战略想清楚<br>增长才发生</span><span data-lang="en">Clarity First.<br>Growth Follows.</span></h2>
+    <p style="margin-bottom:24px;"><span data-lang="zh">我们系统研究德国隐形冠军背后的成功方法论——聚焦主业、全球化布局、持续创新——并将其提炼成可执行的战略工具，帮助企业在不确定中做出更正确的选择。</span><span data-lang="en">We study the success methodology behind Germany's hidden champions — focus, globalization, relentless innovation — and turn it into executable strategy for companies navigating uncertainty.</span></p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">15+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">年咨询经验</span><span data-lang="en">Years of consulting</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">40+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">战略与商业项目</span><span data-lang="en">Strategy engagements</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">中·欧</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">双市场实战视野</span><span data-lang="en">China &amp; Europe</span></p></div>
+    </div>
+    <a href="cases.html#strategy" class="btn btn-ghost"><span data-lang="zh">查看战略案例 →</span><span data-lang="en">View Strategy Cases →</span></a>
+  </div>
+  <div>
+    <ul class="service-list">
+      <li><div class="num">01</div><h3><span data-lang="zh">企业战略与增长战略</span><span data-lang="en">Corporate &amp; Growth Strategy</span></h3><p><span data-lang="zh">公司层战略、业务组合与增长路径设计，回答"做什么、不做什么、何时做"。</span><span data-lang="en">Corporate strategy, portfolio and growth path design — what to do, what not to do, and when.</span></p></li>
+      <li><div class="num">02</div><h3><span data-lang="zh">企业管理咨询</span><span data-lang="en">Management Consulting</span></h3><p><span data-lang="zh">组织设计、流程优化与运营绩效提升，让战略在组织里真正运转起来。</span><span data-lang="en">Organization design, process optimization and operating performance — making strategy work inside the organization.</span></p></li>
+      <li><div class="num">03</div><h3><span data-lang="zh">市场进入与国际化</span><span data-lang="en">Market Entry &amp; Internationalization</span></h3><p><span data-lang="zh">中国市场进入、欧洲市场拓展与全球化布局，融入"隐形冠军"成长方法论研究。</span><span data-lang="en">China market entry, European expansion and global footprint, informed by hidden-champion methodology.</span></p></li>
+      <li><div class="num">04</div><h3><span data-lang="zh">商业尽职调查与并购支持</span><span data-lang="en">Commercial Due Diligence &amp; M&amp;A</span></h3><p><span data-lang="zh">交易前商业尽调、协同效应评估与投后整合，用数据降低并购风险。</span><span data-lang="en">Pre-deal commercial due diligence, synergy assessment and post-merger integration.</span></p></li>
+      <li><div class="num">05</div><h3><span data-lang="zh">绩效提升与转型</span><span data-lang="en">Performance &amp; Transformation</span></h3><p><span data-lang="zh">经销商网络优化、运营重组与转型路线图，把"应该做"变成"正在做"。</span><span data-lang="en">Dealer network optimization, restructuring roadmaps and transformation — from "should do" to "doing".</span></p></li>
+    </ul>
+  </div>
+</div></div></section>
+
+<!-- ============ 02 定价与卓越销售 ============ -->
+<section class="service-section" id="pricing"><div class="container"><div class="service-split">
+  <div>
+    <div class="badge" style="margin-bottom:20px;">02 — <span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales Excellence</span></div>
+    <h2 style="margin-bottom:20px;"><span data-lang="zh">利润，是设计出来的</span><span data-lang="en">Profit Is Designed,<br>Not Discovered</span></h2>
+    <p style="margin-bottom:24px;"><span data-lang="zh">价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计价格体系、销售打法与组织激励，让每一单都更赚钱。</span><span data-lang="en">Value-based pricing and data-driven methods: understand what customers will pay for, then design the price architecture, sales playbook and incentives that make every deal more profitable.</span></p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">3–5%</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">典型定价项目利润率提升</span><span data-lang="en">Typical margin uplift</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">10+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">定价与销售项目</span><span data-lang="en">Pricing &amp; sales projects</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">10+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">行业覆盖（汽车/化工/软件…）</span><span data-lang="en">Industries served</span></p></div>
+    </div>
+    <a href="cases.html#pricing" class="btn btn-ghost"><span data-lang="zh">查看定价与销售案例 →</span><span data-lang="en">View Pricing Cases →</span></a>
+  </div>
+  <div>
+    <ul class="service-list">
+      <li><div class="num">01</div><h3><span data-lang="zh">价值导向定价与新品定价</span><span data-lang="en">Value-Based &amp; Launch Pricing</span></h3><p><span data-lang="zh">基于客户价值认知的新品定价与价格体系设计，让价格匹配价值。</span><span data-lang="en">New-product and price-architecture design anchored in customer-perceived value.</span></p></li>
+      <li><div class="num">02</div><h3><span data-lang="zh">价格提升与利润恢复</span><span data-lang="en">Price Increase &amp; Margin Recovery</span></h3><p><span data-lang="zh">系统性提价与利润恢复计划，管理客户感知与销售抵触，典型项目利润率提升3–5%。</span><span data-lang="en">Systematic price increase and margin recovery, managing customer perception and sales pushback — 3–5% margin uplift on typical engagements.</span></p></li>
+      <li><div class="num">03</div><h3><span data-lang="zh">动态定价与收益管理</span><span data-lang="en">Dynamic Pricing &amp; Revenue Management</span></h3><p><span data-lang="zh">数据驱动的动态定价机制，让价格随供需与客户价值实时优化。</span><span data-lang="en">Data-driven dynamic pricing that optimizes in response to demand and customer value.</span></p></li>
+      <li><div class="num">04</div><h3><span data-lang="zh">渠道与配件定价</span><span data-lang="en">Channel &amp; Spare Parts Pricing</span></h3><p><span data-lang="zh">备件、配件与渠道价格体系优化，释放被低估的利润池。</span><span data-lang="en">Spare parts, accessories and channel pricing optimization — unlocking under-monetized profit pools.</span></p></li>
+      <li><div class="num">05</div><h3><span data-lang="zh">卓越销售</span><span data-lang="en">Sales Excellence</span></h3><p><span data-lang="zh">销售组织设计、关键客户管理、激励与谈判体系——让销售打法与商业战略对齐。</span><span data-lang="en">Sales organization design, key account management, incentives and negotiation systems — aligned with commercial strategy.</span></p></li>
+      <li><div class="num">06</div><h3><span data-lang="zh">销售培训</span><span data-lang="en">Sales Training</span></h3><p><span data-lang="zh">定制化销售方法论与实战培训，把个人经验转化为团队的标准化能力。</span><span data-lang="en">Customized sales methodology and hands-on training — turning individual experience into standard team capability.</span></p></li>
+    </ul>
+  </div>
+</div></div></section>
+
+<!-- ============ 03 AI 落地与转型 ============ -->
+<section class="service-section" id="ai"><div class="container"><div class="service-split">
+  <div>
+    <div class="badge" style="margin-bottom:20px;">03 — <span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Implementation &amp; Transformation</span></div>
+    <h2 style="margin-bottom:20px;"><span data-lang="zh">让 AI 从试点<br>走进利润表</span><span data-lang="en">Take AI From Pilot<br>to P&amp;L</span></h2>
+    <p style="margin-bottom:24px;"><span data-lang="zh">不卖工具，不卖PPT。从战略诊断到应用开发、团队培训与生态连接，陪企业把AI真正用起来——AI是我们第三大板块，也是全公司所有服务的方法底座。</span><span data-lang="en">No tools. No decks. From strategic diagnosis to application development, team training and ecosystem connectivity — we help companies actually use AI. AI is our third pillar, and the methodological foundation for everything we do.</span></p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">30+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">外国CXO闭门演讲</span><span data-lang="en">Foreign CXOs briefed</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">100+</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">人次企业AI培训</span><span data-lang="en">Trainees (single program)</span></p></div>
+      <div class="card" style="flex:1;min-width:180px;text-align:center;padding:24px;"><div class="stat-num" style="font-size:2rem;">25%</div><p style="font-size:.85rem;margin-top:4px;"><span data-lang="zh">情报效率提升（陪跑案例）</span><span data-lang="en">Intelligence efficiency gain</span></p></div>
+    </div>
+    <a href="cases.html#ai" class="btn btn-ghost"><span data-lang="zh">查看 AI 案例 →</span><span data-lang="en">View AI Cases →</span></a>
+  </div>
+  <div>
+    <ul class="service-list">
+      <li><div class="num">01</div><h3><span data-lang="zh">AI 战略与数字化转型诊断</span><span data-lang="en">AI Strategy &amp; Digital Transformation</span></h3><p><span data-lang="zh">AI就绪度评估、用例识别与转型路线图，厂商中立，结果负责。</span><span data-lang="en">AI readiness assessment, use-case identification and transformation roadmap. Vendor-neutral, outcome-accountable.</span></p></li>
+      <li><div class="num">02</div><h3><span data-lang="zh">企业级 AI 培训</span><span data-lang="en">Enterprise AI Training</span></h3><p><span data-lang="zh">从3小时高管工作坊到3天全员实战，覆盖提示词工程、智能体与vibe coding，可配套企业内部AI竞赛等落地机制。</span><span data-lang="en">From 3-hour executive workshops to 3-day company-wide bootcamps — prompt engineering, agents, vibe coding, plus internal AI contests to sustain momentum.</span></p></li>
+      <li><div class="num">03</div><h3><span data-lang="zh">AI 应用开发与陪跑</span><span data-lang="en">AI Application Development &amp; Co-piloting</span></h3><p><span data-lang="zh">从0到1孵化AI产品，陪跑企业内部AI应用落地——如产业情报助手，上线3个月节省1个HC、情报效率提升25%。</span><span data-lang="en">Incubating AI products from 0 to 1 and co-piloting internal AI applications — e.g. an industry-intelligence assistant that saved one headcount and lifted efficiency by 25% in 3 months.</span></p></li>
+      <li><div class="num">04</div><h3><span data-lang="zh">中国 AI 生态导航</span><span data-lang="en">China AI Ecosystem Navigation</span></h3><p><span data-lang="zh">为海外企业与中国CXO提供中国AI生态洞察、闭门演讲、合作伙伴对接与市场进入支持。</span><span data-lang="en">China AI ecosystem briefings, closed-door talks for CXOs, partner matching and market-entry support for global firms.</span></p></li>
+    </ul>
+  </div>
+</div></div></section>
+
+<!-- 服务模式：由重到轻 -->
+<section class="section-pad" style="background:var(--bg2);"><div class="container">
+  <div class="section-header">
+    <div class="badge"><span data-lang="zh">合作模式</span><span data-lang="en">Engagement Models</span></div>
+    <h2><span data-lang="zh">从轻到重，灵活匹配</span><span data-lang="en">From Light to Heavy — a Model for Every Stage</span></h2>
+    <p><span data-lang="zh">无论是一天的培训、半年陪跑，还是完整的咨询项目，我们都用同一套方法论标准交付。</span><span data-lang="en">From a one-day workshop to a six-month co-pilot to a full consulting engagement — delivered with the same methodological rigor.</span></p>
+  </div>
+  <div class="mode-grid">
+    <div class="mode-card"><h4><span data-lang="zh">模式一 · 定制化完整项目</span><span data-lang="en">Model 1 · Full Custom Engagement</span></h4><p><span data-lang="zh">目标与交付物明确，项目周期约4–12周。适用于市场研究、出海策略、AI数字化战略等。</span><span data-lang="en">Clear objectives and deliverables, typically 4–12 weeks. Market research, go-global strategy, AI &amp; digital strategy.</span></p></div>
+    <div class="mode-card"><h4><span data-lang="zh">模式二 · 长期辅导与陪跑</span><span data-lang="en">Model 2 · Long-term Co-piloting</span></h4><p><span data-lang="zh">目标明确但周期灵活，通常6个月以上，导师可常驻或兼职。适用于管理体系提升、定价体系优化、AI应用陪跑。</span><span data-lang="en">Clear goals, flexible timeline — typically 6+ months with embedded or part-time advisors. Management systems, pricing systems, AI co-piloting.</span></p></div>
+    <div class="mode-card"><h4><span data-lang="zh">模式三 · 轻量化培训</span><span data-lang="en">Model 3 · Lightweight Training</span></h4><p><span data-lang="zh">按天计，先建立认知与技能，企业团队自行落地。适用于AI培训、销售培训、数字化转型启动。</span><span data-lang="en">Day-based, building awareness and skills your team applies independently. AI training, sales training, digital transformation kickoffs.</span></p></div>
+  </div>
+</div></section>
+
+<!-- AI 落地 Good vs Great -->
+<section class="section-pad"><div class="container">
+  <div class="section-header">
+    <div class="badge"><span data-lang="zh">AI 落地现实</span><span data-lang="en">AI Reality Check</span></div>
+    <h2><span data-lang="zh">Good vs. Great</span><span data-lang="en">Good vs. Great</span></h2>
+    <p><span data-lang="zh">AI项目成败的差异不在复杂度，在于执行纪律。</span><span data-lang="en">The difference isn't complexity — it's execution discipline.</span></p>
+  </div>
+  <div style="overflow-x:auto;">
+    <table class="compare-table">
+      <thead><tr><th><span data-lang="zh">维度</span><span data-lang="en">Dimension</span></th><th><span data-lang="zh">常见做法</span><span data-lang="en">Typical Approach</span></th><th><span data-lang="zh">Praxis 的做法</span><span data-lang="en">Praxis Approach</span></th></tr></thead>
+      <tbody>
+        <tr><td class="label-col"><span data-lang="zh">战略制定</span><span data-lang="en">Strategy</span></td><td class="bad"><span data-lang="zh">写完PPT就束之高阁</span><span data-lang="en">Deck written, then shelved</span></td><td class="good"><span data-lang="zh">可执行的工作文档，带里程碑和责任人</span><span data-lang="en">Working document with milestones and owners</span></td></tr>
+        <tr><td class="label-col"><span data-lang="zh">就绪度评估</span><span data-lang="en">Readiness</span></td><td class="bad"><span data-lang="zh">假设已就绪，部署后才发现差距</span><span data-lang="en">Assumed ready, gaps surface in production</span></td><td class="good"><span data-lang="zh">投入前评估数据、治理、团队能力</span><span data-lang="en">Assessed before a dollar is committed</span></td></tr>
+        <tr><td class="label-col"><span data-lang="zh">治理设计</span><span data-lang="en">Governance</span></td><td class="bad"><span data-lang="zh">出问题后才补政策文档</span><span data-lang="en">Policy issued after complaints</span></td><td class="good"><span data-lang="zh">架构设计阶段就嵌入治理</span><span data-lang="en">Designed into architecture before deployment</span></td></tr>
+        <tr><td class="label-col"><span data-lang="zh">试点项目</span><span data-lang="en">Pilots</span></td><td class="bad"><span data-lang="zh">IT独立运行，无业务方参与</span><span data-lang="en">IT-owned, no business co-ownership</span></td><td class="good"><span data-lang="zh">业务+IT共治，提前定义生产化路径</span><span data-lang="en">Business + IT co-owned, production path defined upfront</span></td></tr>
+        <tr><td class="label-col"><span data-lang="zh">投资回报</span><span data-lang="en">ROI</span></td><td class="bad"><span data-lang="zh">停留在成本节约估算</span><span data-lang="en">Stops at cost savings estimates</span></td><td class="good"><span data-lang="zh">包含部署后衡量框架和价值实现时间线</span><span data-lang="en">Post-deployment measurement plan included</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<section class="section-pad"><div class="container">
+  <div class="cta-banner" style="background:linear-gradient(135deg,rgba(184,150,90,0.06),rgba(26,39,68,0.04));border:1px solid var(--border);border-radius:20px;padding:64px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(184,150,90,0.06),transparent 70%);"></div>
+    <h2 class="gradient-text" style="position:relative;"><span data-lang="zh">不确定从哪一块开始？</span><span data-lang="en">Not Sure Where to Start?</span></h2>
+    <p style="color:var(--text2);font-size:1.05rem;position:relative;margin-bottom:32px;"><span data-lang="zh">一次45分钟的直接对话，评估你的战略、定价与AI项目现状，找到最佳切入点。</span><span data-lang="en">A 45-minute direct conversation to assess where your strategy, pricing and AI programs stand — and where to start.</span></p>
+    <a href="contact.html" class="btn btn-primary" style="position:relative;font-size:1rem;padding:16px 40px;"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:8px;"><img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en"><img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh"></a><p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型<br>洞察于浅，知行于深</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation<br>From Insight to Execution</span></p></div>
+  <div><h4><span data-lang="zh">导航</span><span data-lang="en">Nav</span></h4><ul><li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li><li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li><li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li><li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
+  <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
+let currentLang='zh';
+function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+</script>
+</body></html>

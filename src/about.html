@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 — Praxis Advisory · 浅觉深知</title>
+<meta name="description" content="浅觉深知（Praxis Advisory）2023年成立于上海。愿景：用AI原生的方式让更多企业触达世界顶级管理咨询，真正创造价值。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .expert-card{display:flex;flex-direction:column;height:100%}
+  .expert-role{font-size:.82rem;color:var(--muted);margin-bottom:10px}
+  .expert-card p{flex:1}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-en.png" alt="Praxis Advisory" style="height:38px;" data-lang="en">
+      <img src="assets/logo-cn.png" alt="浅觉深知" style="height:38px;" data-lang="zh">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+      <li><a href="about.html" class="active"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+      <li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li>
+      <li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+      <li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+      <li><a href="contact.html"><span data-lang="zh">联系</span><span data-lang="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button>
+      <a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<section class="hero" style="padding-bottom:60px;">
+  <div class="badge"><span data-lang="zh">关于</span><span data-lang="en">About</span></div>
+  <h1 class="gradient-text" style="margin-top:24px;">
+    <span data-lang="zh">用 AI 原生的方式<br>重新定义管理咨询</span>
+    <span data-lang="en">Redefining Management Consulting<br>the AI-Native Way</span>
+  </h1>
+  <p class="subtitle" style="max-width:640px;">
+    <span data-lang="zh">浅觉深知（Praxis Advisory）2023年成立于上海。我们的愿景：让更多企业——而不只是行业头部——能够触达世界顶级的管理咨询，并让它真正创造价值。</span>
+    <span data-lang="en">Founded in Shanghai in 2023. Our vision: make world-class management consulting accessible to more companies — not just industry leaders — and turn it into real value.</span>
+  </p>
+</section>
+
+<section class="section-pad">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header" style="text-align:left;">
+      <div class="badge"><span data-lang="zh">我们的故事</span><span data-lang="en">Our Story</span></div>
+      <h2 style="margin-top:20px;"><span data-lang="zh">为什么创办浅觉深知</span><span data-lang="en">Why We Founded Praxis Advisory</span></h2>
+    </div>
+    <div style="font-size:1.05rem; color:var(--text2); line-height:2; margin-bottom:48px;">
+      <p style="margin-bottom:20px;">
+        <span data-lang="zh">过去，顶级管理咨询几乎是头部企业的专属。高昂的费用、金字塔式的项目团队、漫长的交付周期——对大多数企业来说，麦肯锡式的咨询方法只能仰望，难以触达。</span>
+        <span data-lang="en">Top-tier consulting was long reserved for industry leaders. High fees, pyramid-shaped teams, long delivery cycles — for most companies, McKinsey-style methods were something to admire, not to access.</span>
+      </p>
+      <p style="margin-bottom:20px;">
+        <span data-lang="zh">我们成立浅觉深知，就是要改变这件事：让更多企业——无论规模——都能用上世界级的方法论，把战略、定价与增长真正变成结果。</span>
+        <span data-lang="en">We founded Praxis Advisory to change that: to put world-class methodology within reach of more companies, whatever their size — and turn strategy, pricing and growth into real outcomes.</span>
+      </p>
+      <p>
+        <span data-lang="zh">AI 的到来，让这件事第一次变得可能。我们用 <strong style="color:var(--navy);">AI 原生的方式重新组织咨询工作</strong>——更快的分析、更低的交付成本、更透明的过程——把省下来的资源，投入在真正创造价值的地方。</span>
+        <span data-lang="en">AI made this possible for the first time. We organize consulting the <strong style="color:var(--navy);">AI-native way</strong> — faster analysis, lower delivery cost, more transparent process — reinvesting what we save into what actually creates value.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge"><span data-lang="zh">创始人</span><span data-lang="en">Founder</span></div>
+      <h2><span data-lang="zh">陆盛赟 (Alex Lu)</span><span data-lang="en">Alex Lu</span></h2>
+      <p style="max-width:640px;">
+        <span data-lang="zh">创始人拥有超过15年的国际咨询与AI创业经验：从巴黎综合理工学院，到PSA、罗兰贝格、西蒙顾和，再到创立浅觉深知——职业生涯横跨欧洲与中国、传统咨询与AI原生实践。</span>
+        <span data-lang="en">Our founder brings 15+ years across international consulting and AI entrepreneurship: from École Polytechnique, through PSA, Roland Berger and Simon-Kucher, to founding Praxis Advisory — a career spanning Europe and China, traditional consulting and AI-native practice.</span>
+      </p>
+    </div>
+    <div class="timeline" style="max-width:720px;margin-left:auto;margin-right:auto;">
+      <div class="timeline-item">
+        <div class="timeline-year">2004</div>
+        <h3><span data-lang="zh">赴法留学</span><span data-lang="en">France · École Polytechnique</span></h3>
+        <p><span data-lang="zh">毕业于巴黎综合理工学院，法国最顶尖的工程师大学。</span><span data-lang="en">Graduated from École Polytechnique, France's most elite engineering institution.</span></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2007</div>
+        <h3>PSA <span data-lang="zh">标致雪铁龙</span><span data-lang="en">Peugeot-Citroën</span></h3>
+        <p><span data-lang="zh">毕业后首份工作，深入汽车行业运营与战略。</span><span data-lang="en">First role after graduation — deep dive into automotive operations and strategy.</span></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <h3><span data-lang="zh">罗兰贝格</span> Roland Berger</h3>
+        <p><span data-lang="zh">战略咨询核心方法论锤炼。服务汽车、制造等行业头部客户。</span><span data-lang="en">Core strategic consulting methodology. Served leading clients in automotive and manufacturing.</span></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2015</div>
+        <h3><span data-lang="zh">西蒙顾和</span> Simon-Kucher</h3>
+        <p><span data-lang="zh">深耕定价与增长战略。后担任上海办公室负责人。</span><span data-lang="en">Pricing and growth strategy specialist. Later led the Shanghai office.</span></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <h3>ARTEFACT</h3>
+        <p><span data-lang="zh">参与AI与数据驱动咨询实践，开始将传统咨询方法论与AI技术融合。</span><span data-lang="en">AI and data-driven consulting practice. Began fusing traditional consulting methodology with AI technology.</span></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span data-lang="zh">2023 — 至今</span><span data-lang="en">2023 — Present</span></div>
+        <h3><span data-lang="zh">创立浅觉深知 (Praxis Advisory)</span><span data-lang="en">Founded Praxis Advisory</span></h3>
+        <p><span data-lang="zh">AI-native 管理咨询公司。三大服务线：企业战略与管理咨询、定价与卓越销售、AI落地与转型。</span><span data-lang="en">AI-native management consulting. Three service lines: Enterprise Strategy, Pricing &amp; Sales Excellence, AI Implementation &amp; Transformation.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge"><span data-lang="zh">全球网络</span><span data-lang="en">Global Network</span></div>
+      <h2><span data-lang="zh">立足中国，连接全球</span><span data-lang="en">Based in China. Connected Worldwide.</span></h2>
+      <p style="max-width:680px;">
+        <span data-lang="zh">我们总部在中国，但合作伙伴与专家网络遍布欧洲、南美洲、北美与非洲——无论你在哪个市场，都能获得本地化的洞察与国际级的交付。</span>
+        <span data-lang="en">Headquartered in China, our partners and expert network span Europe, South America, North America and Africa — local insight, international delivery, wherever you are.</span>
+      </p>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="card" style="text-align:center;padding:28px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌍</div>
+        <h3 style="font-size:1rem;"><span data-lang="zh">全球伙伴网络</span><span data-lang="en">Global Partner Network</span></h3>
+        <p style="font-size:.88rem;"><span data-lang="zh">欧洲 · 南美洲 · 北美 · 非洲——四大洲合作伙伴，覆盖主要市场与行业。</span><span data-lang="en">Europe · South America · North America · Africa — partners across four continents and key industries.</span></p>
+      </div>
+      <div class="card expert-card">
+        <h3 style="font-size:1.05rem;">Ahmed Guenaoui</h3>
+        <div class="expert-role"><span data-lang="zh">前法国 Engie 高管 · 能源与基础设施领域专家</span><span data-lang="en">Former Engie executive · Energy &amp; Infrastructure</span></div>
+        <p style="font-size:.9rem;"><span data-lang="zh">拥有能源与基础设施领域的高管经验，为客户的国际化与转型项目提供产业级洞见。</span><span data-lang="en">C-suite experience in energy and infrastructure, bringing industry-grade insight to internationalization and transformation projects.</span></p>
+        <a class="card-link" href="https://www.linkedin.com/in/ahmed-guenaoui-aa44b14a/" target="_blank">LinkedIn →</a>
+      </div>
+      <div class="card expert-card">
+        <h3 style="font-size:1.05rem;">Olivier Brosse</h3>
+        <div class="expert-role"><span data-lang="zh">前法国雷诺高管 · 汽车与工业领域专家</span><span data-lang="en">Former Renault executive · Automotive &amp; Industrial</span></div>
+        <p style="font-size:.9rem;"><span data-lang="zh">拥有汽车与工业领域的高管经验，为客户的战略与运营项目带来一线的行业判断。</span><span data-lang="en">C-suite experience in automotive and industrial sectors, bringing frontline industry judgment to strategy and operations projects.</span></p>
+        <a class="card-link" href="https://www.linkedin.com/in/olivier-brosse-b95891202/" target="_blank">LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge"><span data-lang="zh">理念</span><span data-lang="en">Philosophy</span></div>
+      <h2><span data-lang="zh">三条原则</span><span data-lang="en">Three Principles</span></h2>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+      <div class="card">
+        <h3>⚡ <span data-lang="zh">AI 原生交付</span><span data-lang="en">AI-Native Delivery</span></h3>
+        <p><span data-lang="zh">用AI重新组织咨询工作：更快、更可及、更透明。让顶级方法论不再只属于少数企业。</span><span data-lang="en">We re-engineer consulting with AI — faster, more accessible, more transparent. World-class methodology, no longer reserved for the few.</span></p>
+      </div>
+      <div class="card">
+        <h3>🎯 <span data-lang="zh">结果 > 流程</span><span data-lang="en">Outcomes &gt; Process</span></h3>
+        <p><span data-lang="zh">不卖PPT，不卖软件许可。每一项服务都以可衡量的业务成果为终点。用ROI说话。</span><span data-lang="en">No decks. No licenses. Every engagement ends with measurable business results. ROI speaks.</span></p>
+      </div>
+      <div class="card">
+        <h3>🌉 <span data-lang="zh">全球标准 × 本地洞察</span><span data-lang="en">Global Standards × Local Insight</span></h3>
+        <p><span data-lang="zh">中国团队 + 全球伙伴网络，让每个市场的问题，都能用世界级的方法解决。</span><span data-lang="en">A China-based team plus a global partner network — so problems in any market get solved with world-class methods.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge"><span data-lang="zh">领域</span><span data-lang="en">Expertise</span></div>
+      <h2><span data-lang="zh">核心领域</span><span data-lang="en">Core Domains</span></h2>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+      <div class="card" style="text-align:center;padding:28px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🏛️</div>
+        <h3 style="font-size:1rem;"><span data-lang="zh">企业战略与管理咨询</span><span data-lang="en">Strategy &amp; Management</span></h3>
+        <p style="font-size:.88rem;"><span data-lang="zh">麦肯锡式方法论 + 隐形冠军研究，服务更多元的企业</span><span data-lang="en">McKinsey-grade methodology + hidden-champion research, for a broader set of companies</span></p>
+      </div>
+      <div class="card" style="text-align:center;padding:28px;">
+        <div style="font-size:2rem;margin-bottom:12px;">💰</div>
+        <h3 style="font-size:1rem;"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales Excellence</span></h3>
+        <p style="font-size:.88rem;"><span data-lang="zh">西蒙顾和定价方法论专家，AI时代的定价与销售创新</span><span data-lang="en">Simon-Kucher pricing methodology, AI-era pricing and sales innovation</span></p>
+      </div>
+      <div class="card" style="text-align:center;padding:28px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🤖</div>
+        <h3 style="font-size:1rem;"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Implementation</span></h3>
+        <p style="font-size:.88rem;"><span data-lang="zh">从战略到交付，帮助传统企业拥抱AI并产出结果</span><span data-lang="en">Strategy to delivery — helping enterprises adopt AI and produce results</span></p>
+      </div>
+      <div class="card" style="text-align:center;padding:28px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌏</div>
+        <h3 style="font-size:1rem;"><span data-lang="zh">中国 AI 生态</span><span data-lang="en">China AI Ecosystem</span></h3>
+        <p style="font-size:.88rem;"><span data-lang="zh">连接中国AI创新与国际市场的桥梁</span><span data-lang="en">Bridging Chinese AI innovation with global markets</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge"><span data-lang="zh">媒体</span><span data-lang="en">Media</span></div>
+      <h2><span data-lang="zh">媒体发声</span><span data-lang="en">Media Presence</span></h2>
+      <p><span data-lang="zh">CNBC、Barron's、中国经营报等20+媒体特约评论员</span><span data-lang="en">Featured in CNBC, Barron's, SCMP, and 20+ publications</span></p>
+    </div>
+    <div style="text-align:center;">
+      <a href="insights.html" class="btn btn-primary">
+        <span data-lang="zh">查看全部洞察</span><span data-lang="en">View All Insights</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="cta-banner" style="background:linear-gradient(135deg,rgba(184,150,90,0.06),rgba(26,39,68,0.08));border:1px solid var(--border);border-radius:20px;padding:64px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(184,150,90,0.06),transparent 70%);"></div>
+      <h2 class="gradient-text" style="position:relative;"><span data-lang="zh">一起聊聊？</span><span data-lang="en">Let's Talk?</span></h2>
+      <p style="color:var(--text2);font-size:1.05rem;position:relative;margin-bottom:32px;"><span data-lang="zh">一次45分钟的直接对话，看看我们是否适合合作。</span><span data-lang="en">A 45-minute direct conversation to see if we're the right fit.</span></p>
+      <a href="contact.html" class="btn btn-primary" style="position:relative;font-size:1rem;padding:16px 40px;">
+        <span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:8px;">
+          <img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en">
+          <img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh">
+        </a>
+        <p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation</span><br>洞察于浅，知行于深</p>
+      </div>
+      <div>
+        <h4><span data-lang="zh">导航</span><span data-lang="en">Navigation</span></h4>
+        <ul>
+          <li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li>
+          <li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li>
+          <li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li>
+          <li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li>
+          <li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4>
+        <ul>
+          <li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li>
+          <li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li>
+          <li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4>
+        <ul>
+          <li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li>
+          <li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Praxis Advisory. All rights reserved.</span>
+      <span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
+});
+let currentLang='zh';
+function toggleLang(){
+  currentLang=currentLang==='zh'?'en':'zh';
+  document.body.classList.toggle('lang-en',currentLang==='en');
+  document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+  document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+}
+</script>
+</body></html>
