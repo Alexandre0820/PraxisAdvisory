@@ -44,6 +44,32 @@ body {
 .section-pad { padding:96px 0; }
 .text-center { text-align:center; }
 
+/* ===== Client portfolio ===== */
+.client-portfolio { background:var(--bg2); }
+.client-intro { max-width:650px; margin:0 auto 44px; text-align:center; }
+.client-marquee { overflow:hidden; margin:12px -24px; padding:4px 0; }
+.client-track { display:flex; width:max-content; animation:client-slide var(--client-speed) linear infinite; animation-delay:var(--client-delay, 0s); }
+.client-marquee--reverse .client-track { animation-direction:reverse; }
+.client-marquee:hover .client-track { animation-play-state:paused; }
+.client-logo-group { display:flex; gap:12px; padding-right:12px; }
+@keyframes client-slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+.client-logo {
+  width:188px; min-height:92px; flex:none; padding:18px 20px; border:1px solid var(--border);
+  border-radius:12px; background:var(--card); display:flex;
+  align-items:center; justify-content:center; box-shadow:var(--shadow-sm);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.client-logo:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border-hover); }
+.client-logo img { display:block; max-width:100%; max-height:46px; object-fit:contain; }
+.client-logo--gov { flex-direction:column; gap:6px; padding:12px; }
+.client-seal {
+  width:32px; height:32px; border-radius:8px; background:#ac3f33; color:#fff;
+  font-family:'Noto Serif SC',serif; font-size:18px; line-height:32px; text-align:center;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.7);
+}
+.client-city { font-size:.72rem; font-weight:700; color:var(--navy); letter-spacing:.04em; }
+.client-note { margin-top:20px; text-align:center; color:var(--muted); font-size:.78rem; }
+
 /* ===== Typography ===== */
 h1 { font-size:3.6rem; font-weight:900; letter-spacing:-.035em; line-height:1.1; }
 h2 { font-size:2.2rem; font-weight:800; letter-spacing:-.02em; line-height:1.2; }
@@ -310,4 +336,8 @@ body.lang-en .nav-links span[data-lang="en"] { display:inline; }
   .card-grid { grid-template-columns:1fr; }
   .footer-grid { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; gap:12px; text-align:center; }
+  .client-marquee { margin:10px -16px; }
+  .client-logo-group { gap:10px; padding-right:10px; }
+  .client-logo { width:148px; min-height:78px; padding:14px 16px; }
+  .client-logo img { max-height:38px; }
 }
