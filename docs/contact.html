@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>联系 — 预约咨询 | Praxis Advisory</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:48px}
   .contact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px}
@@ -82,8 +85,22 @@
 </div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
-let currentLang='zh';
-function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+  var currentLang='zh';
+  try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
+  function apply(){
+    document.body.classList.toggle('lang-en',currentLang==='en');
+    document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+    document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+  }
+  window.toggleLang=function(){
+    currentLang=currentLang==='zh'?'en':'zh';
+    try{localStorage.setItem('praxis-lang',currentLang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

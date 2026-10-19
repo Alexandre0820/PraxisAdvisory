@@ -6,6 +6,9 @@
 <title>关于 — Praxis Advisory · 浅觉深知</title>
 <meta name="description" content="浅觉深知（Praxis Advisory）2023年成立于上海。愿景：用AI原生的方式让更多企业触达世界顶级管理咨询，真正创造价值。">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   .expert-card{display:flex;flex-direction:column;height:100%}
   .expert-role{font-size:.82rem;color:var(--muted);margin-bottom:10px}
@@ -66,7 +69,7 @@
         <span data-lang="en">We founded Praxis Advisory to change that: to put world-class methodology within reach of more companies, whatever their size — and turn strategy, pricing and growth into real outcomes.</span>
       </p>
       <p>
-        <span data-lang="zh">AI 的到来，让这件事第一次变得可能。我们用 <strong style="color:var(--navy);">AI 原生的方式重新组织咨询工作</strong>——更快的分析、更低的交付成本、更透明的过程——把省下来的资源，投入在真正创造价值的地方。</span>
+        <span data-lang="zh">AI 的到来，让这件事第一次变得可能。我们用 <em class="em">AI 原生的方式重新组织咨询工作</em>——更快的分析、更低的交付成本、更透明的过程——把省下来的资源，投入在真正创造价值的地方。</span>
         <span data-lang="en">AI made this possible for the first time. We organize consulting the <strong style="color:var(--navy);">AI-native way</strong> — faster analysis, lower delivery cost, more transparent process — reinvesting what we save into what actually creates value.</span>
       </p>
     </div>
@@ -122,7 +125,7 @@
   <div class="container">
     <div class="section-header">
       <div class="badge"><span data-lang="zh">全球网络</span><span data-lang="en">Global Network</span></div>
-      <h2><span data-lang="zh">立足中国，连接全球</span><span data-lang="en">Based in China. Connected Worldwide.</span></h2>
+      <h2><span data-lang="zh">立足中国，<em class="hl">连接全球</em></span><span data-lang="en">Based in China. Connected Worldwide.</span></h2>
       <p style="max-width:680px;">
         <span data-lang="zh">我们总部在中国，但合作伙伴与专家网络遍布欧洲、南美洲、北美与非洲——无论你在哪个市场，都能获得本地化的洞察与国际级的交付。</span>
         <span data-lang="en">Headquartered in China, our partners and expert network span Europe, South America, North America and Africa — local insight, international delivery, wherever you are.</span>
@@ -290,15 +293,22 @@
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
-});
-let currentLang='zh';
-function toggleLang(){
-  currentLang=currentLang==='zh'?'en':'zh';
-  document.body.classList.toggle('lang-en',currentLang==='en');
-  document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
-  document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
-}
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+  var currentLang='zh';
+  try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
+  function apply(){
+    document.body.classList.toggle('lang-en',currentLang==='en');
+    document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+    document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+  }
+  window.toggleLang=function(){
+    currentLang=currentLang==='zh'?'en':'zh';
+    try{localStorage.setItem('praxis-lang',currentLang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

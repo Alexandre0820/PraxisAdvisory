@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宋体方案预览 · Demo — Praxis Advisory</title>
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@600;700&display=swap">
+<style>
+  :root{
+    --navy:#1a2744; --navy-light:#2a3d5e; --gold:#b8965a; --gold-dark:#9a7d48;
+    --bg:#ffffff; --bg2:#f8f7f4; --border:rgba(26,39,68,.08);
+    --text:#1a2744; --text2:#4a5568; --muted:#8896a7;
+    --serif:'Noto Serif SC','Songti SC','STSong',serif;
+    --sans:'Inter','PingFang SC','Microsoft YaHei',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  .demo-head{background:var(--bg2);border-bottom:1px solid var(--border);padding:44px 0 36px;text-align:center}
+  .demo-head .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--gold-dark);border:1px solid rgba(184,150,90,.35);background:rgba(184,150,90,.08);padding:5px 14px;border-radius:20px;text-transform:uppercase}
+  .demo-head h1{margin-top:16px;font-family:var(--serif);font-size:34px;font-weight:700;letter-spacing:.01em}
+  .demo-head p{margin-top:10px;font-size:14px;color:var(--text2)}
+  .demo-head .back{display:inline-block;margin-top:16px;font-size:13px;color:var(--gold-dark);text-decoration:none;border-bottom:1px solid rgba(154,125,72,.35)}
+
+  section{padding:56px 0;border-bottom:1px solid var(--border)}
+  .sec-no{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.14em}
+  .sec-title{font-size:20px;font-weight:700;margin-top:6px}
+  .sec-desc{font-size:13.5px;color:var(--text2);margin-top:6px;max-width:640px}
+
+  /* ① 对比卡 */
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  @media(max-width:900px){.compare{grid-template-columns:1fr}}
+  .opt{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column}
+  .opt .label{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+  .opt .label b{color:var(--gold-dark)}
+  .opt .sample{margin-top:20px;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;min-height:120px}
+  .opt .note{margin-top:16px;font-size:12px;color:var(--muted);line-height:1.6}
+  .sans-h{font-family:var(--sans);font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.3}
+  .serif-h{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.02em;line-height:1.35}
+  .serif-h em{font-style:normal;background:linear-gradient(135deg,var(--navy) 30%,var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+  /* ② hero 实装 */
+  .hero-demo{margin-top:28px;text-align:center;background:linear-gradient(180deg,var(--bg2) 0%,#fff 100%);border:1px solid var(--border);border-radius:20px;padding:56px 32px 48px}
+  .hero-demo .badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid rgba(184,150,90,.3);background:rgba(184,150,90,.08);color:var(--gold-dark);font-size:13px;font-weight:600;letter-spacing:.08em}
+  .hero-demo h2{margin-top:22px;font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:.015em;line-height:1.3;background:linear-gradient(135deg,var(--navy) 20%,var(--gold) 130%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-demo .sub{margin:18px auto 0;max-width:560px;font-size:15px;font-weight:400;color:var(--text2);line-height:1.9}
+  .hero-demo .btns{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none}
+  .btn-p{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff}
+  .btn-g{background:transparent;color:var(--navy);border:1.5px solid rgba(26,39,68,.18)}
+
+  /* ③ 强调手法 */
+  .emphasis{margin-top:28px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px}
+  .emphasis .row{padding:18px 0;border-bottom:1px dashed rgba(26,39,68,.12);font-size:15px;line-height:2;color:var(--text2)}
+  .emphasis .row:last-child{border-bottom:none}
+  .emphasis .k{display:inline-block;min-width:86px;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.1em;vertical-align:top;padding-top:9px}
+  .e-bold{color:var(--navy);font-weight:700}
+  .e-gold{color:var(--gold-dark);font-weight:600}
+  .e-serif{font-family:var(--serif);font-weight:600;color:var(--navy)}
+  .e-both{font-family:var(--serif);font-weight:700;color:var(--gold-dark)}
+  .verdict{margin-top:18px;font-size:12.5px;color:var(--muted)}
+  .verdict b{color:var(--gold-dark)}
+
+  /* ④ 区块标题 + 引文 */
+  .block-demo{margin-top:28px;text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
+  .block-demo .badge{display:inline-block;padding:5px 14px;border-radius:20px;border:1px solid rgba(184,150,90,.3);background:rgba(184,150,90,.08);color:var(--gold-dark);font-size:12px;font-weight:600;letter-spacing:.08em}
+  .block-demo h3{margin-top:18px;font-family:var(--serif);font-size:30px;font-weight:700;letter-spacing:.02em;line-height:1.35}
+  .block-demo p{margin-top:14px;font-size:14.5px;color:var(--text2)}
+  .quote{margin-top:36px;background:rgba(184,150,90,.06);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:22px 26px;text-align:left}
+  .quote .q{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--navy)}
+  .quote .who{margin-top:10px;font-size:12px;color:var(--gold-dark);font-weight:600;letter-spacing:.04em}
+
+  .demo-foot{padding:36px 0 56px;text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9}
+  .demo-foot b{color:var(--text2)}
+</style>
+</head>
+<body>
+
+<div class="demo-head">
+  <div class="wrap">
+    <span class="tag">Font Preview · Demo</span>
+    <h1>宋体方案预览</h1>
+    <p>以下为独立演示页，未接入主站。全部使用网站真实文案与品牌色（海军蓝 × 金）。<br>若采用某一方案，正式接入时将自托管并做用字子集化（约 150KB，不依赖 Google Fonts）。</p>
+    <a class="back" href="index.html">← 返回网站首页</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-no">01</div>
+    <div class="sec-title">标题处理对比</div>
+    <div class="sec-desc">同一句首页主标题，三种处理方式。宋体的衬线笔画在中文大字号下比黑体更优雅、更有 editorial 气质。</div>
+    <div class="compare">
+      <div class="opt">
+        <div class="label">A · 现状 <b>黑体 600</b></div>
+        <div class="sample"><div class="sans-h">让战略、定价与 AI<br>变成可衡量的增长</div></div>
+        <div class="note">当前全站使用的处理（PingFang Semibold）。现代、干净，但偏“工具感”。</div>
+      </div>
+      <div class="opt">
+        <div class="label">B · 宋体 <b>Serif 600</b></div>
+        <div class="sample"><div class="serif-h">让战略、定价与 AI<br>变成可衡量的增长</div></div>
+        <div class="note">思源宋体 Semibold。笔画对比带来书卷气，与海军蓝×金的配色天然契合。</div>
+      </div>
+      <div class="opt">
+        <div class="label">C · 宋体 <b>+ 渐变强调</b></div>
+        <div class="sample"><div class="serif-h">让战略、定价与 AI<br>变成<em>可衡量</em>的增长</div></div>
+        <div class="note">宋体 + 海军蓝到金的渐变关键词。全站最“贵”的一种处理，适合 hero 独用。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-no">02</div>
+    <div class="sec-title">Hero 实装效果（方案 B+C）</div>
+    <div class="sec-desc">直接使用首页真实文案渲染的宋体版 hero。</div>
+    <div class="hero-demo">
+      <span class="badge">From Insight to Execution</span>
+      <h2>让战略、定价与 AI<br>变成可衡量的增长</h2>
+      <p class="sub">15年顶级咨询方法论 × 中国与欧洲双市场实践。<br>企业战略 · 定价与卓越销售 · AI落地与转型——三大专业板块，一个共同目标。</p>
+      <div class="btns">
+        <a class="btn btn-p" href="services.html">探索服务 →</a>
+        <a class="btn btn-g" href="cases.html">查看案例</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-no">03</div>
+    <div class="sec-title">正文强调手法对比</div>
+    <div class="sec-desc">你提到的“不用加粗、用斜体或换颜色”——中文没有真斜体，机械倾斜很难看，所以优雅的中文站点用这四种替代。以下用服务页真实段落演示：</div>
+    <div class="emphasis">
+      <div class="row"><span class="k">A 加粗</span>价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计<span class="e-bold">价格体系</span>、销售打法与组织激励。</div>
+      <div class="row"><span class="k">B 换颜色</span>价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计<span class="e-gold">价格体系</span>、销售打法与组织激励。</div>
+      <div class="row"><span class="k">C 宋体</span>价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计<span class="e-serif">价格体系</span>、销售打法与组织激励。</div>
+      <div class="row"><span class="k">D 宋体+金</span>价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计<span class="e-both">价格体系</span>、销售打法与组织激励。</div>
+      <div class="verdict">我的推荐：<b>B 或 D</b>——金色本来就是你们的品牌色，黑色加粗在长段落里显得“重”，宋体强调（C/D）则是端传媒、财新等中文编辑站点的经典手法，和方案 B/C 的宋体大标题一脉相承。</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-no">04</div>
+    <div class="sec-title">区块标题与引文实装</div>
+    <div class="sec-desc">服务/案例页的居中区块标题，以及洞察页引文的宋体效果。</div>
+    <div class="block-demo">
+      <span class="badge">02 — 定价与卓越销售</span>
+      <h3>利润，是设计出来的</h3>
+      <p>价值导向定价 + 数据驱动方法论：先看清客户愿意为什么付费，再设计价格体系、销售打法与组织激励，让每一单都更赚钱。</p>
+    </div>
+    <div class="quote" style="max-width:680px;margin-left:auto;margin-right:auto">
+      <div class="q">“丰田之所以是全球盈利能力最强的车企，关键在于其高度全球化的布局。与中国车企普遍以国内市场为主不同，丰田的利润来源覆盖日本、北美、欧洲等多个市场。”</div>
+      <div class="who">— Alex Lu · 中国经营报</div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-foot">
+  <div class="wrap">
+    <b>说明</b>：本页为效果预览，字体从 Google Fonts 加载（演示页不计代价）。<br>
+    若选定方案，正式做法是把六个页面标题/引文用字抽出来做子集化（通常 300–500 个汉字），自托管一个 100–200KB 的字体文件，不依赖外部 CDN。<br>
+    方案可混搭，例如“大标题用宋体 + 正文强调用金色，不做宋体正文强调”。
+  </div>
+</div>
+
+</body>
+</html>

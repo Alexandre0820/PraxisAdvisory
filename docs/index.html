@@ -6,21 +6,28 @@
 <title>Praxis Advisory — 企业战略 · 定价 · AI 咨询</title>
 <meta name="description" content="Praxis Advisory（浅觉深知）— From Insight to Execution. 15年咨询经验，三大专业板块：企业战略与管理咨询、定价与卓越销售、AI落地与转型。连接中国与欧洲。">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   .marquee-wrap {
     overflow:hidden; border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border); padding:20px 0;
+    border-bottom:1px solid var(--border); padding:30px 0;
     background:var(--bg2); z-index:1; position:relative;
   }
   .marquee {
     display:flex; gap:48px; animation:marquee 30s linear infinite;
-    white-space:nowrap;
+    white-space:nowrap; width:max-content;
   }
+  .marquee:hover { animation-play-state:paused; }
   .marquee-item {
-    font-size:.85rem; color:var(--muted); font-weight:500;
-    display:flex; align-items:center; gap:8px; flex-shrink:0;
+    font-size:.98rem; color:var(--text2); font-weight:600; letter-spacing:.01em;
+    display:flex; align-items:center; gap:9px; flex-shrink:0;
+    text-decoration:none; transition:color .2s;
   }
-  .marquee-item .dot { width:6px; height:6px; border-radius:50%; background:var(--gold); opacity:.5; }
+  .marquee-item:hover { color:var(--navy); }
+  .marquee-item:focus-visible { color:var(--navy); outline:2px solid var(--gold); outline-offset:4px; border-radius:6px; }
+  .marquee-item .dot { width:6px; height:6px; border-radius:50%; background:var(--gold); opacity:.55; }
   @keyframes marquee {
     0% { transform:translateX(0); }
     100% { transform:translateX(-50%); }
@@ -73,7 +80,7 @@
     <span data-lang="en">Turn Strategy, Pricing & AI<br>Into Measurable Growth</span>
   </h1>
   <p class="subtitle">
-    <span data-lang="zh">15年顶级咨询方法论 × 中国与欧洲双市场实践。<br>企业战略 · 定价与卓越销售 · AI落地与转型——三大专业板块，一个共同目标。</span>
+    <span data-lang="zh">15年顶级咨询方法论 × 中国与欧洲双市场实践。<br>企业战略 · 定价与卓越销售 · AI落地与转型——<em class="em">三大专业板块，一个共同目标。</em></span>
     <span data-lang="en">15 years of top-tier consulting methodology × China-Europe practice.<br>Enterprise strategy · Pricing & sales excellence · AI transformation — three disciplines, one outcome.</span>
   </p>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
@@ -93,22 +100,22 @@
 
 <div class="marquee-wrap">
   <div class="marquee">
-    <span class="marquee-item"><span class="dot"></span>Enterprise Strategy</span>
-    <span class="marquee-item"><span class="dot"></span>Management Consulting</span>
-    <span class="marquee-item"><span class="dot"></span>Pricing & Sales Excellence</span>
-    <span class="marquee-item"><span class="dot"></span>Sales Training</span>
-    <span class="marquee-item"><span class="dot"></span>AI Transformation</span>
-    <span class="marquee-item"><span class="dot"></span>Enterprise AI Training</span>
-    <span class="marquee-item"><span class="dot"></span>China AI Ecosystem</span>
-    <span class="marquee-item"><span class="dot"></span>Hidden Champion Research</span>
-    <span class="marquee-item"><span class="dot"></span>Enterprise Strategy</span>
-    <span class="marquee-item"><span class="dot"></span>Management Consulting</span>
-    <span class="marquee-item"><span class="dot"></span>Pricing & Sales Excellence</span>
-    <span class="marquee-item"><span class="dot"></span>Sales Training</span>
-    <span class="marquee-item"><span class="dot"></span>AI Transformation</span>
-    <span class="marquee-item"><span class="dot"></span>Enterprise AI Training</span>
-    <span class="marquee-item"><span class="dot"></span>China AI Ecosystem</span>
-    <span class="marquee-item"><span class="dot"></span>Hidden Champion Research</span>
+    <a class="marquee-item" href="services.html#strategy"><span class="dot"></span><span data-lang="zh">企业战略</span><span data-lang="en">Enterprise Strategy</span></a>
+    <a class="marquee-item" href="services.html#strategy"><span class="dot"></span><span data-lang="zh">管理咨询</span><span data-lang="en">Management Consulting</span></a>
+    <a class="marquee-item" href="services.html#pricing"><span class="dot"></span><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing & Sales Excellence</span></a>
+    <a class="marquee-item" href="services.html#pricing"><span class="dot"></span><span data-lang="zh">销售培训</span><span data-lang="en">Sales Training</span></a>
+    <a class="marquee-item" href="services.html#ai"><span class="dot"></span><span data-lang="zh">AI 转型</span><span data-lang="en">AI Transformation</span></a>
+    <a class="marquee-item" href="services.html#ai"><span class="dot"></span><span data-lang="zh">企业 AI 培训</span><span data-lang="en">Enterprise AI Training</span></a>
+    <a class="marquee-item" href="services.html#ai"><span class="dot"></span><span data-lang="zh">中国 AI 生态</span><span data-lang="en">China AI Ecosystem</span></a>
+    <a class="marquee-item" href="services.html#strategy"><span class="dot"></span><span data-lang="zh">隐形冠军研究</span><span data-lang="en">Hidden Champion Research</span></a>
+    <a class="marquee-item" href="services.html#strategy" aria-hidden="true"><span class="dot"></span><span data-lang="zh">企业战略</span><span data-lang="en">Enterprise Strategy</span></a>
+    <a class="marquee-item" href="services.html#strategy" aria-hidden="true"><span class="dot"></span><span data-lang="zh">管理咨询</span><span data-lang="en">Management Consulting</span></a>
+    <a class="marquee-item" href="services.html#pricing" aria-hidden="true"><span class="dot"></span><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing & Sales Excellence</span></a>
+    <a class="marquee-item" href="services.html#pricing" aria-hidden="true"><span class="dot"></span><span data-lang="zh">销售培训</span><span data-lang="en">Sales Training</span></a>
+    <a class="marquee-item" href="services.html#ai" aria-hidden="true"><span class="dot"></span><span data-lang="zh">AI 转型</span><span data-lang="en">AI Transformation</span></a>
+    <a class="marquee-item" href="services.html#ai" aria-hidden="true"><span class="dot"></span><span data-lang="zh">企业 AI 培训</span><span data-lang="en">Enterprise AI Training</span></a>
+    <a class="marquee-item" href="services.html#ai" aria-hidden="true"><span class="dot"></span><span data-lang="zh">中国 AI 生态</span><span data-lang="en">China AI Ecosystem</span></a>
+    <a class="marquee-item" href="services.html#strategy" aria-hidden="true"><span class="dot"></span><span data-lang="zh">隐形冠军研究</span><span data-lang="en">Hidden Champion Research</span></a>
   </div>
 </div>
 
@@ -121,7 +128,7 @@
         <span data-lang="en">Growth & Profit<br>Are Silently Leaking</span>
       </h2>
       <p>
-        <span data-lang="zh">战略停在PPT里，定价凭感觉拍脑袋，AI停在试点。投入都在发生，产出却没有跟上。</span>
+        <span data-lang="zh">战略停在PPT里，定价凭感觉拍脑袋，AI停在试点。投入都在发生，<em class="em">产出却没有跟上。</em></span>
         <span data-lang="en">Strategy stays on slides. Pricing runs on gut feel. AI stalls in pilots. The investment happens — the outcomes don't.</span>
       </p>
     </div>
@@ -176,7 +183,7 @@
   <div class="container">
     <div class="client-intro">
       <div class="badge"><span data-lang="zh">客户与合作伙伴</span><span data-lang="en">Clients &amp; Partners</span></div>
-      <h2 style="margin-top:18px;"><span data-lang="zh">与行业领先者一起<br>把判断变成结果</span><span data-lang="en">Trusted by Leaders<br>Across Industries</span></h2>
+      <h2 style="margin-top:18px;"><span data-lang="zh">与行业领先者一起<br>把判断变成<em class="hl">结果</em></span><span data-lang="en">Trusted by Leaders<br>Across Industries</span></h2>
       <p style="margin-top:16px;"><span data-lang="zh">从汽车制造到软件科技，从专业服务到金融、高校与消费品，我们与不同市场的领先企业和组织并肩工作。</span><span data-lang="en">From automotive and software to professional services, finance, academia and consumer goods, we work alongside leading organizations across markets.</span></p>
     </div>
     <div class="client-marquee" style="--client-speed:48s;--client-delay:-10s" aria-label="Client and partner logos"><div class="client-track">
@@ -208,7 +215,7 @@
   <div class="container">
     <div class="section-header">
       <div class="badge"><span data-lang="zh">精选案例</span><span data-lang="en">Featured Cases</span></div>
-      <h2><span data-lang="zh">做过的事，比说过的话更可信</span><span data-lang="en">What We've Done Speaks Louder</span></h2>
+      <h2><span data-lang="zh">做过的事，比说过的话<em class="hl">更可信</em></span><span data-lang="en">What We've Done Speaks Louder</span></h2>
       <p><span data-lang="zh">以下案例均已脱敏。从定价转型到AI陪跑，从经销商绩效到生态对接——每个项目都以业务成果为终点。</span><span data-lang="en">Anonymized by design. From pricing transformation to AI co-piloting, from dealer performance to ecosystem connections — every engagement ends in outcomes.</span></p>
     </div>
     <div class="case-feature">
@@ -306,8 +313,22 @@
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
-let currentLang='zh';
-function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+  var currentLang='zh';
+  try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
+  function apply(){
+    document.body.classList.toggle('lang-en',currentLang==='en');
+    document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+    document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+  }
+  window.toggleLang=function(){
+    currentLang=currentLang==='zh'?'en':'zh';
+    try{localStorage.setItem('praxis-lang',currentLang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

@@ -6,6 +6,9 @@
 <title>案例 — 战略 · 定价 · AI | Praxis Advisory</title>
 <meta name="description" content="Praxis Advisory 精选案例：企业战略与管理咨询、定价与卓越销售、AI落地与转型。全部案例脱敏呈现。">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   .cases-hero{padding:140px 24px 70px;text-align:center;position:relative;z-index:1;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(184,150,90,0.03) 0%,transparent 100%)}
   .pillar-nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px;position:relative;z-index:1}
@@ -62,7 +65,7 @@
 
 <!-- ============ 战略与管理咨询案例 ============ -->
 <section class="case-section" id="strategy"><div class="container">
-  <div class="section-header" style="text-align:left;margin-bottom:0;">
+  <div class="section-header" style="margin-bottom:0;">
     <div class="badge">01 — <span data-lang="zh">企业战略与管理咨询</span><span data-lang="en">Strategy &amp; Management Consulting</span></div>
     <h2 style="margin-top:20px;"><span data-lang="zh">战略案例</span><span data-lang="en">Strategy Cases</span></h2>
   </div>
@@ -110,7 +113,7 @@
 
 <!-- ============ 定价与卓越销售案例 ============ -->
 <section class="case-section" id="pricing"><div class="container">
-  <div class="section-header" style="text-align:left;margin-bottom:0;">
+  <div class="section-header" style="margin-bottom:0;">
     <div class="badge">02 — <span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales Excellence</span></div>
     <h2 style="margin-top:20px;"><span data-lang="zh">定价与销售案例</span><span data-lang="en">Pricing &amp; Sales Cases</span></h2>
   </div>
@@ -157,7 +160,7 @@
 
 <!-- ============ AI 落地与转型案例 ============ -->
 <section class="case-section" id="ai"><div class="container">
-  <div class="section-header" style="text-align:left;margin-bottom:0;">
+  <div class="section-header" style="margin-bottom:0;">
     <div class="badge">03 — <span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Implementation &amp; Transformation</span></div>
     <h2 style="margin-top:20px;"><span data-lang="zh">AI 案例</span><span data-lang="en">AI Cases</span></h2>
   </div>
@@ -222,8 +225,22 @@
 </div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
-let currentLang='zh';
-function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+  var currentLang='zh';
+  try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
+  function apply(){
+    document.body.classList.toggle('lang-en',currentLang==='en');
+    document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+    document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+  }
+  window.toggleLang=function(){
+    currentLang=currentLang==='zh'?'en':'zh';
+    try{localStorage.setItem('praxis-lang',currentLang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

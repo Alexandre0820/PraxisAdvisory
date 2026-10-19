@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>洞察 — 媒体发声 | Praxis Advisory</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
   .insights-hero{padding:140px 24px 60px;text-align:center;position:relative;z-index:1;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(184,150,90,0.03) 0%,transparent 100%)}
   .insights-stats{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;margin-top:36px}
@@ -13,7 +16,7 @@
   .filter-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(184,150,90,0.08)}
   .filter-btn.active{background:linear-gradient(135deg,rgba(184,150,90,0.15),rgba(184,150,90,0.08));border-color:var(--gold);color:var(--navy);box-shadow:0 0 20px rgba(184,150,90,0.12)}
   .i-section{margin-bottom:56px;position:relative;z-index:1}
-  .i-section-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  .i-section-header{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
   .i-section-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
   .i-section-title{font-size:1.3rem;font-weight:700;color:var(--navy);flex:1}
   .i-section-count{color:var(--muted);font-size:.85rem;padding:4px 12px;border:1px solid var(--border);border-radius:6px;background:rgba(184,150,90,0.04)}
@@ -31,7 +34,7 @@
   .outlet-wire{background:rgba(251,113,133,0.12);color:var(--rose);border:1px solid rgba(251,113,133,0.2)}
   .outlet-wechat{background:rgba(52,211,153,0.12);color:var(--emerald);border:1px solid rgba(52,211,153,0.2)}
   .outlet-other{background:rgba(148,163,184,0.12);color:var(--text2);border:1px solid rgba(148,163,184,0.2)}
-  .i-card-title{font-size:1.12rem;font-weight:700;margin-bottom:12px;line-height:1.45;color:#fff}
+  .i-card-title{font-size:1.12rem;font-weight:700;margin-bottom:12px;line-height:1.45;color:var(--navy)}
   .i-card-title a{color:inherit;text-decoration:none;transition:color .2s}
   .i-card-title a:hover{color:var(--gold)}
   .i-card-summary{font-size:.92rem;color:var(--text2);margin-bottom:16px;line-height:1.75}
@@ -144,10 +147,22 @@
 </div><div class="footer-bottom"><span>© 2026 Praxis Advisory.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div></div></footer>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)});
-let currentLang='zh';
-function toggleLang(){currentLang=currentLang==='zh'?'en':'zh';document.body.classList.toggle('lang-en',currentLang==='en');document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
-function filterAll(){document.querySelectorAll('.i-section').forEach(s=>s.style.display='');document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelector('.filter-btn').classList.add('active')}
-function filterCat(cat){document.querySelectorAll('.i-section').forEach(s=>{s.style.display=s.dataset.cat===cat?'':'none'});document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));event.target.closest('.filter-btn').classList.add('active')}
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+  var currentLang='zh';
+  try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
+  function apply(){
+    document.body.classList.toggle('lang-en',currentLang==='en');
+    document.getElementById('langBtn').textContent=currentLang==='zh'?'EN':'中';
+    document.documentElement.lang=currentLang==='zh'?'zh-CN':'en';
+  }
+  window.toggleLang=function(){
+    currentLang=currentLang==='zh'?'en':'zh';
+    try{localStorage.setItem('praxis-lang',currentLang)}catch(e){}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

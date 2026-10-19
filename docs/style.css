@@ -3,7 +3,16 @@
    Light theme · Navy + Gold · High contrast
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+/* ===== Noto Serif SC（自托管子集化 · 方案C标题/D强调专用） ===== */
+@font-face{
+  font-family:'Noto Serif SC'; font-style:normal; font-weight:600;
+  font-display:swap; src:url('assets/fonts/noto-serif-sc-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Noto Serif SC'; font-style:normal; font-weight:700;
+  font-display:swap; src:url('assets/fonts/noto-serif-sc-700.woff2') format('woff2');
+}
+
 
 :root {
   --bg: #ffffff;
@@ -23,6 +32,7 @@
   --muted: #8896a7;
   --accent: #b8965a;
   --emerald: #2d8a5e;
+  --serif:'Noto Serif SC','Songti SC','STSong',STSong,SimSun,serif;
   --rose: #c53030;
   --shadow-sm: 0 1px 3px rgba(26,39,68,0.06);
   --shadow-md: 0 4px 16px rgba(26,39,68,0.08);
@@ -32,7 +42,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-family: 'Inter','PingFang SC','HarmonyOS Sans SC','MiSans','Microsoft YaHei','Noto Sans SC',sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -64,16 +74,16 @@ body {
 .client-logo--gov { flex-direction:column; gap:6px; padding:12px; }
 .client-seal {
   width:32px; height:32px; border-radius:8px; background:#ac3f33; color:#fff;
-  font-family:'Noto Serif SC',serif; font-size:18px; line-height:32px; text-align:center;
+  font-family:"Songti SC","STSong",STSong,SimSun,"Noto Serif SC",serif; font-size:18px; line-height:32px; text-align:center;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.7);
 }
 .client-city { font-size:.72rem; font-weight:700; color:var(--navy); letter-spacing:.04em; }
 .client-note { margin-top:20px; text-align:center; color:var(--muted); font-size:.78rem; }
 
 /* ===== Typography ===== */
-h1 { font-size:3.6rem; font-weight:900; letter-spacing:-.035em; line-height:1.1; }
-h2 { font-size:2.2rem; font-weight:800; letter-spacing:-.02em; line-height:1.2; }
-h3 { font-size:1.3rem; font-weight:700; line-height:1.35; }
+h1 { font-family:var(--serif); font-size:3.6rem; font-weight:700; letter-spacing:.01em; line-height:1.25; }
+h2 { font-family:var(--serif); font-size:2.2rem; font-weight:700; letter-spacing:.01em; line-height:1.35; }
+h3 { font-family:var(--serif); font-size:1.3rem; font-weight:600; line-height:1.45; }
 p  { color: var(--text2); font-size:1rem; }
 
 .gradient-text {
@@ -81,6 +91,15 @@ p  { color: var(--text2); font-size:1rem; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ===== 标题渐变关键词（方案C） ===== */
+.hl{
+  font-style:normal;
+  background:linear-gradient(135deg, var(--navy) 25%, var(--gold) 130%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+/* ===== 正文强调：宋体+金（方案D） ===== */
+.em{ font-family:var(--serif); font-style:normal; font-weight:700; color:var(--gold-dark); }
 
 /* ===== Badge / Chip ===== */
 .badge {
@@ -171,14 +190,14 @@ p  { color: var(--text2); font-size:1rem; }
 .hero h1 { margin-bottom:20px; }
 .hero .subtitle {
   font-size:1.2rem; color:var(--text2); max-width:680px;
-  margin:0 auto 40px; font-weight:300; line-height:1.8;
+  margin:0 auto 40px; font-weight:400; line-height:1.8;
 }
 .hero .stats {
   display:flex; justify-content:center; gap:56px; flex-wrap:wrap; margin-top:48px;
 }
 .stat { text-align:center; }
 .stat-num {
-  font-size:2.6rem; font-weight:900;
+  font-size:2.6rem; font-weight:800;
   background:linear-gradient(135deg,var(--navy),var(--gold));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
 }
@@ -250,7 +269,7 @@ p  { color: var(--text2); font-size:1rem; }
   position:relative; box-shadow:var(--shadow-sm);
 }
 .step-num {
-  font-size:2.4rem; font-weight:900; margin-bottom:16px;
+  font-size:2.4rem; font-weight:800; margin-bottom:16px;
   background:linear-gradient(135deg,var(--navy),var(--gold));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
 }
@@ -340,4 +359,24 @@ body.lang-en .nav-links span[data-lang="en"] { display:inline; }
   .client-logo-group { gap:10px; padding-right:10px; }
   .client-logo { width:148px; min-height:78px; padding:14px 16px; }
   .client-logo img { max-height:38px; }
+}
+
+
+/* ===== 卡片说明文字居中（服务/案例/洞察） ===== */
+.service-list li{text-align:center}
+.service-list .num{display:block;margin:0 0 4px}
+.mode-card{text-align:center}
+.case-card{text-align:center}
+.case-top{justify-content:center}
+.case-more h4{text-align:center}
+.more-item{justify-content:center;text-align:center}
+.i-card{text-align:center}
+.i-card-top{justify-content:center}
+.i-card-tags{justify-content:center}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce){
+  .marquee, .client-track { animation:none; }
+  .marquee, .client-marquee { overflow-x:auto; }
+  html { scroll-behavior:auto; }
 }
