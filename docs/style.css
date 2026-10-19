@@ -206,6 +206,9 @@ p  { color: var(--text2); font-size:1rem; }
   text-transform:uppercase; letter-spacing:.05em;
 }
 
+/* ===== Hero 副标题（各页统一：盒子居中 + 统一样式） ===== */
+.subtitle{margin:0 auto;font-size:1.2rem;line-height:1.8;color:var(--text2)}
+
 /* ===== Cards ===== */
 .card-grid {
   display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
@@ -240,7 +243,7 @@ p  { color: var(--text2); font-size:1rem; }
 }
 .section-header .badge { margin-bottom:20px; }
 .section-header h2 { margin-bottom:16px; }
-.section-header p { font-size:1.05rem; }
+.section-header p { font-size:1.05rem; margin-left:auto; margin-right:auto; }
 
 /* ===== Timeline ===== */
 .timeline { position:relative; padding-left:40px; margin-top:48px; }
