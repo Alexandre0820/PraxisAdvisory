@@ -245,6 +245,34 @@ p  { color: var(--text2); font-size:1rem; }
 .section-header h2 { margin-bottom:16px; }
 .section-header p { font-size:1.05rem; margin-left:auto; margin-right:auto; }
 
+
+/* ===== 首页左右分栏模块（图文交替） ===== */
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:stretch}
+.split-copy{order:2}
+.split-visual{order:1}
+.split-grid--rev .split-copy{order:1}
+.split-grid--rev .split-visual{order:2}
+.split-copy .badge{margin-bottom:20px}
+.split-copy h2{margin-bottom:16px;text-align:left}
+.split-p{font-size:1.02rem;line-height:1.85;color:var(--text2)}
+.split-visual{display:flex;align-items:center;justify-content:center;background:linear-gradient(165deg,#ffffff 0%,var(--bg2) 100%);border:1px solid var(--border);border-radius:20px;padding:clamp(20px,3vw,36px);box-shadow:var(--shadow-sm)}
+.split-visual svg{width:100%;height:auto;max-height:100%;display:block}
+.point-list{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.point{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.point:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--border-hover)}
+.point-num{font-size:1.55rem;font-weight:800;line-height:1.2;min-width:74px;padding-top:2px;background:linear-gradient(135deg,var(--navy),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-variant-numeric:tabular-nums}
+.point-body{flex:1}
+.point-body h3{font-size:1rem;margin-bottom:4px;color:var(--navy)}
+.point-body p{font-size:.87rem;line-height:1.7}
+.point-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.point-icon svg{width:21px;height:21px}
+a.point{text-decoration:none;color:inherit}
+@media(max-width:900px){
+  .split-grid{grid-template-columns:1fr;gap:36px}
+  .split-copy,.split-visual{order:0}
+  .split-visual{max-width:520px;margin:0 auto}
+}
+
 /* ===== Timeline ===== */
 .timeline { position:relative; padding-left:40px; margin-top:48px; }
 .timeline::before {
@@ -324,6 +352,9 @@ p  { color: var(--text2); font-size:1rem; }
 }
 
 /* ===== Bilingual ===== */
+text[data-lang="en"]{display:none}
+body.lang-en text[data-lang="zh"]{display:none}
+body.lang-en text[data-lang="en"]{display:inline}
 [data-lang="en"] { display:none; }
 body.lang-en [data-lang="zh"] { display:none; }
 body.lang-en [data-lang="en"] { display:block; }
