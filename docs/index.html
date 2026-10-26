@@ -1,8 +1,21 @@
+<!-- 本文件由 build.mjs 生成；请编辑 src/index.html 并运行 node build.mjs，勿直接修改 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Praxis Advisory">
+<meta property="og:title" content="Praxis Advisory — 企业战略 · 定价 · AI 咨询">
+<meta property="og:description" content="Praxis Advisory（浅觉深知）— From Insight to Execution. 15年咨询经验，三大专业板块：企业战略与管理咨询、定价与卓越销售、AI落地与转型。连接中国与欧洲。">
+<meta property="og:url" content="https://alexandre0820.github.io/PraxisAdvisory/">
+<meta property="og:image" content="https://alexandre0820.github.io/PraxisAdvisory/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
 <title>Praxis Advisory — 企业战略 · 定价 · AI 咨询</title>
 <meta name="description" content="Praxis Advisory（浅觉深知）— From Insight to Execution. 15年咨询经验，三大专业板块：企业战略与管理咨询、定价与卓越销售、AI落地与转型。连接中国与欧洲。">
 <link rel="stylesheet" href="style.css">
@@ -67,14 +80,16 @@
       <button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN</button>
       <a href="contact.html" class="btn btn-primary"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a>
     </div>
-    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <button class="nav-toggle" aria-expanded="false">
+      <span class="sr-only" data-lang="zh">打开菜单</span><span class="sr-only" data-lang="en">Open menu</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
   </div>
 </nav>
 
+
 <section class="hero">
-  <div class="badge">From Insight to Execution</div>
+  <div class="badge"><span data-lang="zh">洞察于浅 · 知行于深</span><span data-lang="en">From Insight to Execution</span></div>
   <h1 class="gradient-text" style="margin-top:24px;">
     <span data-lang="zh">让战略、定价与 AI<br>变成可衡量的增长</span>
     <span data-lang="en">Turn Strategy, Pricing & AI<br>Into Measurable Growth</span>
@@ -92,7 +107,7 @@
   </div>
   <div class="stats">
     <div class="stat"><div class="stat-num">15+</div><div class="stat-label"><span data-lang="zh">年咨询经验</span><span data-lang="en">Years Experience</span></div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label"><span data-lang="zh">核心服务板块</span><span data-lang="en">Core Disciplines</span></div></div>
+    <div class="stat"><div class="stat-num"><span data-lang="zh">三大</span><span data-lang="en">3</span></div><div class="stat-label"><span data-lang="zh">核心服务板块</span><span data-lang="en">Core Disciplines</span></div></div>
     <div class="stat"><div class="stat-num">40+</div><div class="stat-label"><span data-lang="zh">咨询项目</span><span data-lang="en">Engagements</span></div></div>
     <div class="stat"><div class="stat-num">20+</div><div class="stat-label"><span data-lang="zh">媒体报道</span><span data-lang="en">Publications</span></div></div>
   </div>
@@ -325,19 +340,19 @@
     </div>
     <div class="case-feature">
       <a href="cases.html#pricing"><div class="card">
-        <div class="case-top" style="margin-bottom:12px;"><span style="font-size:.72rem;padding:4px 10px;border-radius:6px;font-weight:600;background:rgba(184,150,90,0.08);color:var(--gold-dark);border:1px solid rgba(184,150,90,0.2);"><span data-lang="zh">定价 · 软件</span><span data-lang="en">Pricing · Software</span></span></div>
+        <div class="case-top" style="margin-bottom:12px;"><span class="tag tag--gold"><span data-lang="zh">定价 · 软件</span><span data-lang="en">Pricing · Software</span></span></div>
         <h3 style="font-size:1.05rem;"><span data-lang="zh">某中国开源软件企业 · 定价转型</span><span data-lang="en">Chinese Open-Source Firm · Pricing Transformation</span></h3>
         <p style="font-size:.88rem;"><span data-lang="zh">从融资驱动走向收入驱动，三年陪跑实现收入100%增长。</span><span data-lang="en">Three-year co-pilot that doubled revenue — from capital-driven to revenue-driven growth.</span></p>
         <span class="card-link"><span data-lang="zh">查看案例 →</span><span data-lang="en">View Case →</span></span>
       </div></a>
       <a href="cases.html#strategy"><div class="card">
-        <div class="case-top" style="margin-bottom:12px;"><span style="font-size:.72rem;padding:4px 10px;border-radius:6px;font-weight:600;background:rgba(26,39,68,0.08);color:var(--navy);border:1px solid rgba(26,39,68,0.18);"><span data-lang="zh">战略 · 汽车</span><span data-lang="en">Strategy · Auto</span></span></div>
+        <div class="case-top" style="margin-bottom:12px;"><span class="tag tag--navy"><span data-lang="zh">战略 · 汽车</span><span data-lang="en">Strategy · Auto</span></span></div>
         <h3 style="font-size:1.05rem;"><span data-lang="zh">某欧洲车企 · 中国经销商绩效提升</span><span data-lang="en">European OEM · Dealer Performance in China</span></h3>
         <p style="font-size:.88rem;"><span data-lang="zh">从诊断分层到驻场辅导，沉淀可复制的经销商管理工具包。</span><span data-lang="en">Diagnosis, tiering and on-site coaching — a dealer-management toolkit rolled out network-wide.</span></p>
         <span class="card-link"><span data-lang="zh">查看案例 →</span><span data-lang="en">View Case →</span></span>
       </div></a>
       <a href="cases.html#ai"><div class="card">
-        <div class="case-top" style="margin-bottom:12px;"><span style="font-size:.72rem;padding:4px 10px;border-radius:6px;font-weight:600;background:rgba(45,138,94,0.08);color:var(--emerald);border:1px solid rgba(45,138,94,0.2);"><span data-lang="zh">AI · 国际</span><span data-lang="en">AI · International</span></span></div>
+        <div class="case-top" style="margin-bottom:12px;"><span class="tag tag--green"><span data-lang="zh">AI · 国际</span><span data-lang="en">AI · International</span></span></div>
         <h3 style="font-size:1.05rem;"><span data-lang="zh">巴西CXO代表团 · 中国AI生态</span><span data-lang="en">Brazilian CXOs · China AI Ecosystem</span></h3>
         <p style="font-size:.88rem;"><span data-lang="zh">连续两年主讲，定向对接中国机器人等领先企业。</span><span data-lang="en">Two years running — ecosystem briefings plus targeted connections to Chinese robotics leaders.</span></p>
         <span class="card-link"><span data-lang="zh">查看案例 →</span><span data-lang="en">View Case →</span></span>
@@ -539,20 +554,23 @@
           <img src="assets/logo-en.png" alt="Praxis Advisory" style="height:32px;" data-lang="en">
           <img src="assets/logo-cn.png" alt="浅觉深知" style="height:32px;" data-lang="zh">
         </a>
-        <p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型<br>洞察于浅，知行于深</span><span data-lang="en">Enterprise Strategy · Pricing & Sales Excellence · AI Transformation<br>From Insight to Execution</span></p>
+        <p><span data-lang="zh">企业战略 · 定价与卓越销售 · AI落地与转型<br>洞察于浅，知行于深</span><span data-lang="en">Enterprise Strategy · Pricing &amp; Sales Excellence · AI Transformation<br>From Insight to Execution</span></p>
       </div>
       <div><h4><span data-lang="zh">导航</span><span data-lang="en">Navigation</span></h4><ul><li><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a></li><li><a href="about.html"><span data-lang="zh">关于</span><span data-lang="en">About</span></a></li><li><a href="services.html"><span data-lang="zh">服务</span><span data-lang="en">Services</span></a></li><li><a href="cases.html"><span data-lang="zh">案例</span><span data-lang="en">Cases</span></a></li><li><a href="insights.html"><span data-lang="zh">洞察</span><span data-lang="en">Insights</span></a></li></ul></div>
-      <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy & Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing & Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
-      <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank">LinkedIn</a></li></ul></div>
+      <div><h4><span data-lang="zh">服务</span><span data-lang="en">Services</span></h4><ul><li><a href="services.html#strategy"><span data-lang="zh">战略与管理咨询</span><span data-lang="en">Strategy &amp; Mgmt</span></a></li><li><a href="services.html#pricing"><span data-lang="zh">定价与卓越销售</span><span data-lang="en">Pricing &amp; Sales</span></a></li><li><a href="services.html#ai"><span data-lang="zh">AI 落地与转型</span><span data-lang="en">AI Transformation</span></a></li></ul></div>
+      <div><h4><span data-lang="zh">联系</span><span data-lang="en">Contact</span></h4><ul><li><a href="contact.html"><span data-lang="zh">预约咨询</span><span data-lang="en">Book a Call</span></a></li><li><a href="https://www.linkedin.com/in/alexandre-lu/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Praxis Advisory. All rights reserved.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Praxis Advisory. All rights reserved.</span><span><span data-lang="zh">上海 · 巴黎</span><span data-lang="en">Shanghai · Paris</span></span></div>
   </div>
 </footer>
+
 
 <script>
 (function(){
   var nav=document.getElementById('nav');
   window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)});
+
+  /* 语言切换 */
   var currentLang='zh';
   try{currentLang=localStorage.getItem('praxis-lang')||'zh'}catch(e){}
   function apply(){
@@ -566,6 +584,31 @@
     apply();
   };
   apply();
+
+  /* 移动端菜单 */
+  var navToggle=document.querySelector('.nav-toggle');
+  var navLinks=document.getElementById('navLinks');
+  if(navToggle&&navLinks){
+    navToggle.addEventListener('click',function(){
+      var open=navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open);
+    });
+  }
+
+  /* FAQ 折叠（键盘可达） */
+  document.addEventListener('click',function(e){
+    if(!e.target.closest)return;
+    var q=e.target.closest('.faq-q');
+    if(q){
+      var item=q.parentElement;
+      q.setAttribute('aria-expanded',item.classList.toggle('open'));
+    }
+  });
+
+  /* 版权年份 */
+  var year=document.getElementById('year');
+  if(year){year.textContent=new Date().getFullYear();}
 })();
 </script>
+
 </body></html>
